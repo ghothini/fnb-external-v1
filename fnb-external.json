@@ -1,0 +1,13 @@
+{
+    "displayName": "fnb-External",
+    "appName": "fnb-external",
+    "description": "where a user can apply for an FNB account",
+    "lastModified": "2024-05-13T11:16:24.761Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2024-05-13T11:16:23.924Z",
+    "analyticsId": "24c1c2fb-8dab-54a8-7784-1a40be8055db",
+    "createdStudioVersion": "9.2.1"
+}

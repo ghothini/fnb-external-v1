@@ -1,0 +1,39 @@
+<div fxLayout="column wrap" style="background-color:white" class="full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="height:10%; background-color:yellow" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div>
+            Admin</div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" style="height:20%" fxLayoutAlign="center center" [fxShow]="true"><img imgSrc="/Web/Images/internal2.jpg" style="height:120px" width="90%"></div>
+  <div fxLayout="column wrap" style="height:70%" class="full-width" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="column wrap" style="width:60%" class="full-height" fxLayoutAlign="center center" [fxShow]="true">
+      <form [formGroup]="page.loginAdminForm" style="background-color:#cce7e7 ; width:70%;border: solid 1px black;   border-radius: 7px;padding:1em;margin-top:1em">
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true">
+          <p style="font-size: xx-large; font-weight: 400;">
+            Sign in</p>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="font-size: large; color: grey; font-weight: 300;">
+            Email Address</label>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [required]="false" formControlName="email">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label style="font-size: large; color: grey; font-weight: 300;">
+            Password</label>
+          <mat-form-field [appearance]="&apos;outline&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+            <input matInput [required]="false" formControlName="password">
+
+          </mat-form-field>
+        </div>
+        <div fxLayout="column wrap" fxLayoutAlign="center center" [fxShow]="true"><button mat-raised-button>Sign In</button></div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<div fxLayout="column wrap" style="background-color:white" class="relative full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-container absolute">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div fxLayout="column wrap" style="background-color:green" class="height-10" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      </div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" class="full-width height-80" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" style="width:80%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" style="width:35%;margin-right: 15px" fxLayoutAlign="end stretch" [fxShow]="true">
+        <div style=" font-weight: 400; font-size: xx-large;margin-bottom :0;height:10px" class="text-align">
+          <p class="font-xxlarge font-w400">Tell Us More About <br> you</p>
+        </div><img imgSrc="/Web/Images/verification.PNG" style="height:150px" width="180px">
+      </div>
+      <div fxLayout="row wrap" style=";width:63%;padding:10px" fxLayoutAlign="start stretch" [fxShow]="true">
+        <h4>
+          Personal Details</h4>
+        <p style=";margin-top:0" class="font-w400">
+          We need your RSA ID to verify if you are already on our banking records. We will authenticate you via an OTP(One Time Password) that will be sent to the cellphone number.</p>
+        <p style="margin-top:0" class="font-w400">
+          Your cellphone number will be linked to your account. FNB makes sure your information is kept safe and secure.</p>
+        <form [formGroup]="page.verificationForm" style="gap:1em">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              RSA ID Number</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="true" formControlName="id" (input)="validateId()">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Email Address</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="true" formControlName="email">
+              <mat-error align="start" *ngIf="page.verificationForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" class="footer-box height-10" fxLayoutAlign="center end" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back-btn" routerLink="/accounts">Back</button><button mat-button class="continue-btn" (click)="verification(); enter()">Continue</button></div>
+  </div>
+</div>

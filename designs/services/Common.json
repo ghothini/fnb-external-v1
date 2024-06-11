@@ -1,0 +1,99 @@
+[
+    {
+        "id": "sd_JvSdJbOo4jcXn94e",
+        "type": "tab",
+        "createdDate": "2024-05-17T07:22:07.165Z",
+        "label": "Common",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "tabType": "client",
+        "generateNext": true,
+        "serviceName": "Common",
+        "relativeParentPath": ""
+    },
+    {
+        "id": "sd_ICNt0OG5fw5WUhW5",
+        "type": "Start",
+        "z": "sd_JvSdJbOo4jcXn94e",
+        "viewType": "client-server",
+        "nodeType": "start",
+        "name": "goBack",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "accept_bh": false,
+        "functionName": "goBack",
+        "category": "General",
+        "x": 160,
+        "y": 140,
+        "wires": [
+            [
+                "sd_DGw05dILlW4iCtsw"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "Common"
+    },
+    {
+        "id": "sd_DGw05dILlW4iCtsw",
+        "type": "UseDependency",
+        "z": "sd_JvSdJbOo4jcXn94e",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "Location",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "location"
+                },
+                "injectable": true
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/common",
+        "serviceDesignerType": "client",
+        "functionName": "sd_DGw05dILlW4iCtsw",
+        "category": "Function",
+        "x": 285,
+        "y": 140,
+        "wires": [
+            [
+                "sd_JBQGNtMZWWxBCwsR"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Common",
+        "generated": true
+    },
+    {
+        "id": "sd_JBQGNtMZWWxBCwsR",
+        "type": "Script",
+        "z": "sd_JvSdJbOo4jcXn94e",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.location.back();",
+        "functionName": "sd_JBQGNtMZWWxBCwsR",
+        "category": "Function",
+        "x": 405,
+        "y": 140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "Common",
+        "generated": true
+    }
+]

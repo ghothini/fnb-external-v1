@@ -1,0 +1,56 @@
+{
+    "routes": [
+        {
+            "component": "homeComponent",
+            "path": "home",
+            "children": [
+                {
+                    "component": "landingComponent",
+                    "path": "landing"
+                }
+            ]
+        },
+        {
+            "component": "accountsComponent",
+            "path": "accounts"
+        },
+        {
+            "component": "registerComponent",
+            "path": "register"
+        },
+        {
+            "component": "verificationComponent",
+            "path": "verification"
+        },
+        {
+            "component": "signaturePadComponent",
+            "path": "signaturePad"
+        },
+        {
+            "path": "login",
+            "component": "LoginComponent"
+        },
+        {
+            "component": "backPageComponent",
+            "path": "backpage"
+        },
+        {
+            "path": "regulations",
+            "component": "regulationComponent"
+        },
+        {
+            "path": "internal",
+            "component": "internalLoginComponent"
+        },
+        {
+            "path": "''",
+            "redirectTo": "/home",
+            "pathMatch": "full",
+            "default": true
+        },
+        {
+            "path": "**",
+            "component": "PageNotFoundComponent"
+        }
+    ]
+}

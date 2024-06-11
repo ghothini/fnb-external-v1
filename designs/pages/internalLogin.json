@@ -1,0 +1,126 @@
+[
+    {
+        "id": "sd_CtEfwIsCmpbdnO0W",
+        "type": "tab",
+        "createdDate": "2024-05-28T09:26:40.290Z",
+        "label": "internalLogin",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "internalLoginComponent"
+    },
+    {
+        "id": "sd_MZ7rko3RLXSBSUNq",
+        "type": "OnInit",
+        "z": "sd_CtEfwIsCmpbdnO0W",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_MZ7rko3RLXSBSUNq",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_Bzxky0vzwJv7M0L9"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "internalLoginComponent"
+    },
+    {
+        "id": "sd_T5cLGy6tL1HWsSwj",
+        "type": "PageVariables",
+        "z": "sd_CtEfwIsCmpbdnO0W",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_T5cLGy6tL1HWsSwj",
+        "category": "Function",
+        "x": 205,
+        "y": 40,
+        "wires": [
+            [
+                "sd_s96toLDLkjs455FO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "internalLoginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Bzxky0vzwJv7M0L9",
+        "type": "UseDependency",
+        "z": "sd_CtEfwIsCmpbdnO0W",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "property": "",
+        "propertyType": "bh",
+        "propertyGv": "bh.",
+        "alias": "",
+        "modules": [
+            {
+                "textIp": "FormControl",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            },
+            {
+                "textIp": "FormGroup",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                },
+                "injectable": false
+            }
+        ],
+        "import_all": false,
+        "library": "@angular/forms",
+        "serviceDesignerType": "pages",
+        "functionName": "sd_Bzxky0vzwJv7M0L9",
+        "category": "Function",
+        "x": 125,
+        "y": 40,
+        "wires": [
+            [
+                "sd_T5cLGy6tL1HWsSwj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "internalLoginComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_s96toLDLkjs455FO",
+        "type": "Script",
+        "z": "sd_CtEfwIsCmpbdnO0W",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.loginAdminForm = new FormGroup({\n    email: new FormControl(''),\n    password: new FormControl('')\n});\n\nconsole.log('page', page)",
+        "functionName": "sd_s96toLDLkjs455FO",
+        "category": "Function",
+        "x": 305,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "internalLoginComponent",
+        "generated": true
+    }
+]

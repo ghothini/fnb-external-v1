@@ -1,0 +1,17 @@
+<div fxLayout="column wrap" fxLayoutGap=".2em" fxLayoutAlign="start stretch" [fxShow]="true">
+  <h3 class="no-margin white">
+    Signature:</h3>
+  <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div class="full-width">
+      <canvas class="border-white">
+
+      </canvas>
+    </div>
+    <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-raised-button class="signature-btn" (click)="clearSignature()">Clear Signature</button><button mat-raised-button class="signature-btn bg-black white" (click)="submitSignature()">Submit</button></div>
+      <div>
+        <img [src]="page.base64String">
+      </div>
+    </div>
+  </div>
+</div>

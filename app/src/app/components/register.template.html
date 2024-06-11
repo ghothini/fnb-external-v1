@@ -1,0 +1,158 @@
+<div fxLayout="column wrap" style="background-color:white" class="relative main-container full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div *ngIf="page.showSpinner" class="spinner-container absolute">
+    <mat-spinner></mat-spinner>
+  </div>
+  <div fxLayout="column wrap" class="height-10" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      </div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" class="contant-form full-width" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" style="width:80%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="row wrap" style="width:35%;margin-right: 15px" fxLayoutAlign="end stretch" [fxShow]="true">
+        <div style=" font-weight: 400; font-size: xx-large;margin-bottom :0;height:10px" class="text-align">
+          <p class="font-xxlarge font-w400">Help Us build your <br>profile</p>
+        </div><img imgSrc="/Web/Images/profile.png.PNG" style="height:170px" width="200px">
+      </div>
+      <div fxLayout="row wrap" style="width:63%;padding:10px" fxLayoutAlign="start stretch" [fxShow]="true">
+        <h4>
+          About you</h4>
+        <p style="margin-top:0" class="font-w400">
+          Your cellphone number will be linked to your account. FNB makes sure your information is kept safe and secure.</p>
+        <form [formGroup]="page.registerForm" style="gap:1em">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Title</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="title" [required]="true">
+                <mat-option [value]="&apos;Mr&apos;" disabled="false">Mr</mat-option><mat-option [value]="&apos;Ms&apos;" disabled="false">Ms</mat-option><mat-option [value]="&apos;Miss&apos;" disabled="false">Miss</mat-option><mat-option [value]="&apos;Mrs&apos;" disabled="false">Mrs</mat-option><mat-option [value]="&apos;Adv&apos;" disabled="false">Adv</mat-option><mat-option [value]="&apos;Dr&apos;" disabled="false">Dr</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              First Name</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="false" formControlName="name">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Surname</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="false" formControlName="surname">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Ethnic group</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="race" [required]="true">
+                <mat-option [value]="&apos;White&apos;" disabled="false">White</mat-option><mat-option [value]="&apos;Asian/Indian&apos;" disabled="false">Asian/Indian</mat-option><mat-option [value]="&apos;Black&apos;" disabled="false">Black</mat-option><mat-option [value]="&apos;Other&apos;" disabled="false">Other</mat-option><mat-option [value]="&apos;Coloured&apos;" disabled="false">Coloured</mat-option><mat-option [value]="&apos;Please select&apos;" disabled="false">Please select</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Email address</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="true" formControlName="email">
+              <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Marital status</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="marital" [required]="true">
+                <mat-option [value]="&apos;Divorced&apos;" disabled="false">Divorced</mat-option><mat-option [value]="&apos;Married&apos;" disabled="false">Married</mat-option><mat-option [value]="&apos;Separated&apos;" disabled="false">Separated</mat-option><mat-option [value]="&apos;Unmarried&apos;" disabled="false">Unmarried</mat-option><mat-option [value]="&apos;Widowed&apos;" disabled="false">Widowed</mat-option><mat-option [value]="&apos;Please select&apos;" disabled="false">Please select</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Number of dependants</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput type="number" [required]="false" formControlName="depedents" (input)="validateNoDependents()">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Annual Gross income</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="false" formControlName="income">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Higest level of qualification</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="qualification" [required]="true">
+                <mat-option [value]="&apos;Bachelors&apos;" disabled="false">Bachelors</mat-option><mat-option [value]="&apos;Diploma&apos;" disabled="false">Diploma</mat-option><mat-option [value]="&apos;Doctorate&apos;" disabled="false">Doctorate</mat-option><mat-option [value]="&apos;Graduate&apos;" disabled="false">Graduate</mat-option><mat-option [value]="&apos;Grade 10&apos;" disabled="false">Grade 10</mat-option><mat-option [value]="&apos;Grade 12&apos;" disabled="false">Grade 12</mat-option><mat-option [value]="&apos;Honours&apos;" disabled="false">Honours</mat-option><mat-option [value]="&apos;Incomplete&apos;" disabled="false">Incomplete</mat-option><mat-option [value]="&apos;Lower Than Grade 10&apos;" disabled="false">Lower Than Grade 10</mat-option><mat-option [value]="&apos;Please select&apos;" disabled="false">Please select</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Country of birth</div><mat-autocomplete #auto="matAutocomplete">
+              <mat-optgroup *ngFor="let group of page.filteredOptions " [label]="group.letter">
+                <mat-option *ngFor="let option of group.names; let p = index;" [value]="option">
+                  {{option}}
+                </mat-option>
+              </mat-optgroup>
+            </mat-autocomplete>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="false" [matAutocomplete]="auto" (input)="filterData($event)" formControlName="country">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <h5>
+              Address</h5><label>
+              Address</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [required]="false" formControlName="address">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Primary source of income</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="sourceOfIncome" [required]="true">
+                <mat-option [value]="&apos;Asset Disposal&apos;" disabled="false">Asset Disposal</mat-option><mat-option [value]="&apos;Rental Income&apos;" disabled="false">Rental Income</mat-option><mat-option [value]="&apos;Interest&apos;" disabled="false">Interest</mat-option><mat-option [value]="&apos;Dividends&apos;" disabled="false">Dividends</mat-option><mat-option [value]="&apos;Investment income/ Capital&apos;" disabled="false">Investment income/ Capital</mat-option><mat-option [value]="&apos;Commissions Earned&apos;" disabled="false">Commissions Earned</mat-option><mat-option [value]="&apos;Sponsorship/ Donations&apos;" disabled="false">Sponsorship/ Donations</mat-option><mat-option [value]="&apos;Insurance Payouts&apos;" disabled="false">Insurance Payouts</mat-option><mat-option [value]="&apos;Allowance&apos;" disabled="false">Allowance</mat-option><mat-option [value]="&apos;Proceeds From Own Business&apos;" disabled="false">Proceeds From Own Business</mat-option><mat-option [value]="&apos;Pensions&apos;" disabled="false">Pensions</mat-option><mat-option [value]="&apos;Social Grants&apos;" disabled="false">Social Grants</mat-option><mat-option [value]="&apos;Maintenance&apos;" disabled="false">Maintenance</mat-option><mat-option [value]="&apos;Court Order&apos;" disabled="false">Court Order</mat-option><mat-option [value]="&apos;Student Grant&apos;" disabled="false">Student Grant</mat-option><mat-option [value]="&apos;Prize Winnings&apos;" disabled="false">Prize Winnings</mat-option><mat-option [value]="&apos;Gift&apos;" disabled="false">Gift</mat-option><mat-option [value]="&apos;Inheritance&apos;" disabled="false">Inheritance</mat-option><mat-option [value]="&apos;Royalty Income&apos;" disabled="false">Royalty Income</mat-option><mat-option [value]="&apos;Rewards Earned&apos;" disabled="false">Rewards Earned</mat-option><mat-option [value]="&apos;Please select&apos;" disabled="false">Please select</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Do you receive any additional income?</div><mat-slide-toggle [required]="false" formControlName="additionalIncome"> </mat-slide-toggle>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              Are you a resident or registered in a foreign country for tax?</div><mat-slide-toggle [required]="false" name="tax" formControlName="tax"> </mat-slide-toggle>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            <div>
+              <p>Please upload ID Document</p><!-- <mat-label>clear unfiltered selfie</mat-label> -->
+              <input id="uploadedFile1" (change)="fileUpload($event, &quot;ID&quot;)" type="file" required>
+            </div>
+            <div>
+              <p>Please upload Pay slip</p><input id="uploadedFile2" (change)="fileUpload($event, &quot;POP&quot;)" type="file" required>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" style="height:7%" class="footer-box" fxLayoutAlign="center end" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back-btn" (click)="goBack()">Back</button><button mat-button class="continue-btn" (click)="submit()">Continue</button></div>
+  </div>
+</div>

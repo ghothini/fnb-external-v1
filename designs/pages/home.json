@@ -1,0 +1,86 @@
+[
+    {
+        "id": "sd_EKqtYSPxH7CFU4qY",
+        "type": "tab",
+        "createdDate": "2024-05-13T12:52:35.100Z",
+        "label": "home",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_IrBub76ZsOSu5g7l",
+        "type": "OnInit",
+        "z": "sd_EKqtYSPxH7CFU4qY",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_IrBub76ZsOSu5g7l",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_GFC5KF4qFOjKHEBL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "homeComponent"
+    },
+    {
+        "id": "sd_GFC5KF4qFOjKHEBL",
+        "type": "PageVariables",
+        "z": "sd_EKqtYSPxH7CFU4qY",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "menuItems",
+                "typedIpValue": {
+                    "type": "this.page",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_GFC5KF4qFOjKHEBL",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_2L9Ja47sI8UNIjDj"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_2L9Ja47sI8UNIjDj",
+        "type": "Script",
+        "z": "sd_EKqtYSPxH7CFU4qY",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.menuItems = [\n    { label: 'Home', id:'landing', route: '/home/landing' },\n    { label: 'For me & my family',id:'family', route: '/home/family' },\n    { label: 'For my Business',id:'business', route: '/home/business' },\n    { label: 'Corporates + Public Sector',id:'business', route: '/home/business' },\n    { label: 'Private Banking',id:'private', route: '/home/private' },\n    { label: 'Calculators',id:'business', route: '/home/business' },\n    { label: 'Rates + Pricing',id:'business', route: '/home/business' },\n    { label: 'News + Insight',id:'business', route: '/home/business' },\n    { label: 'About FNB + Legal',id:'business', route: '/home/business' },\n    { label: 'Contacts Us Tools',id:'contact', route: '/home/contact' },\n    { label: 'Careers at FNB',id:'business', route: '/home/business' },\n    \n  ]",
+        "functionName": "sd_2L9Ja47sI8UNIjDj",
+        "category": "Function",
+        "x": 300,
+        "y": 60,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "homeComponent",
+        "generated": true
+    }
+]

@@ -1,0 +1,123 @@
+[
+    {
+        "id": "sd_41qprTo0NjWowrBH",
+        "type": "tab",
+        "createdDate": "2024-05-17T07:13:01.546Z",
+        "label": "backPage",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "backPageComponent"
+    },
+    {
+        "id": "sd_dG8fwbFepfxR8oqT",
+        "type": "OnInit",
+        "z": "sd_41qprTo0NjWowrBH",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_dG8fwbFepfxR8oqT",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_bQxsUzANSK01pqMl"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "backPageComponent"
+    },
+    {
+        "id": "sd_bQxsUzANSK01pqMl",
+        "type": "PageVariables",
+        "z": "sd_41qprTo0NjWowrBH",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_bQxsUzANSK01pqMl",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "backPageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_LUanhjlgaDSNcOQ2",
+        "type": "PageStart",
+        "z": "sd_41qprTo0NjWowrBH",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "goBack",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "goBack",
+        "category": "General",
+        "x": 80,
+        "y": 200,
+        "wires": [
+            [
+                "sd_QqrATI9Y22VTNjcP"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "backPageComponent"
+    },
+    {
+        "id": "sd_QqrATI9Y22VTNjcP",
+        "type": "PageCallService",
+        "z": "sd_41qprTo0NjWowrBH",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_JvSdJbOo4jcXn94e",
+            "type": "tab",
+            "createdDate": "2024-05-17T07:22:07.165Z",
+            "label": "Common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_ICNt0OG5fw5WUhW5",
+            "flowName": "goBack"
+        },
+        "inputVariables": [],
+        "outputMapping": [],
+        "serviceImportPath": "app/sd-services/Common",
+        "startName": "goBack",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_QqrATI9Y22VTNjcP",
+        "category": "General",
+        "x": 245,
+        "y": 200,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "backPageComponent",
+        "generated": true
+    }
+]

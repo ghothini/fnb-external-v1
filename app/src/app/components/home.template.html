@@ -1,0 +1,57 @@
+<div fxLayout="column wrap" style="background-color:$background-blue" class="full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="background-color:white" class="height-10" fxLayoutAlign="start space-between" [fxShow]="true"><mat-toolbar style="background-color:white" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"><mat-icon>search</mat-icon></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" style="background-color:white" class="height-10" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><mat-toolbar style="background-color:white">
+      <div fxLayout="row wrap" class="full-height full-width" fxLayoutAlign="space-evenly center" [fxShow]="true" *ngFor="let item of page.menuItems">
+        <div fxLayout="column wrap" style=" height: 50%; border-right:solid 1px grey" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+          <div style="font-size: 11px;padding:1em">
+            <p class="no-margin">{{item.label}}</p>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" class="height-80" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="row wrap" class="main full-height full-width" fxLayoutAlign="center center" [fxShow]="true">
+      <div fxLayout="column wrap" class="full-height width-30" fxLayoutAlign="start center" [fxShow]="true">
+        <div>
+          <p class="small-font"> How can we help you <br>
+            <span class="bank">Bank</span>
+          </p>
+        </div>
+      </div>
+      <div fxLayout="column wrap" class="right width-70 full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div fxLayout="row wrap" style="width:33%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div class="text-center full-width card">
+            Entry banking</div>
+          <div class="text-center color-light-green full-width card">
+            Family banking</div>
+          <div class="text-center full-width card">
+            Transact services</div>
+        </div>
+        <div fxLayout="row wrap" style="width:34%;" class="full-height" fxLayoutAlign="center stretch" [fxShow]="true">
+          <div routerLink="/accounts" class="text-center color-light-green full-width card">
+            Personal banking</div>
+          <div class="text-center full-width card">
+            International banking</div>
+          <div class="text-center color-light-green full-width card">
+            Foreign National banking</div>
+        </div>
+        <div fxLayout="row wrap" style="width:33%;" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div class="text-center full-width card">
+            Private banking</div>
+          <div class="text-center color-light-green full-width card">
+            Ways to bank</div>
+          <div style="background-color:#007f80; height: 34%;" class="full-width">
+          </div>
+          <div style="width:200px;height: 200px;  color: white; justify-content: center;  align-items: center; background-color: black; right: 56px; bottom: -60px;position: absolute;" class="column text-center">
+            <p class="font">Not with us?</p><button mat-button class="orange-btn">Switch Now!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

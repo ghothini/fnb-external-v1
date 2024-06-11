@@ -1,0 +1,71 @@
+<div fxLayout="column wrap" style="background-color:whitesmoke" class="full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="background-color:white" class="height-50px" fxLayoutAlign="start space-between" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+        <div fxLayout="row wrap" class="pointer" fxLayoutAlign="start stretch" [fxShow]="true" (click)="goBack()"><mat-icon>navigate_before</mat-icon>
+          <div>
+            Back</div>
+        </div>
+      </div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"><mat-icon>search</mat-icon></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" style="background-color:white" class="height-50px" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px">
+      <div fxLayout="row wrap" class="full-height full-width" fxLayoutAlign="space-evenly center" [fxShow]="true" *ngFor="let item of page.menuItems">
+        <div fxLayout="column wrap" style=" height: 50%; border-right:solid 1px grey" fxLayoutGap="1em" fxLayoutAlign="center center" [fxShow]="true">
+          <div style="font-size: 11px;padding:1em">
+            <p class="no-margin">{{item.label}}</p>
+          </div>
+        </div>
+      </div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" class="contant-contanier full-width" fxLayoutAlign="start center" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutAlign="center center" [fxShow]="true">
+      <p>
+        <span class="big-font">Personal Banking</span>
+      </p>
+      <div fxLayout="row wrap" class="full-height full-width" fxLayoutAlign="space-evenly stretch" [fxShow]="true">
+        <div fxLayout="column wrap" class="card-styles width-30" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="pay-font">EASY PAYU</span>
+          </div><img imgSrc="/Web/Images/Card2.PNG" width="300px">
+          <div class="text-align column flex">
+            <span class="amount-font">R5.20 p.m</span>
+
+            <span class="grey-font">Required Income</span> <span class="font-w500">R0</span>
+          </div>
+          <div style="margin:0" class="text-align flex column">
+            <p class="font-w">FNB Easy PAYU, named most affordable bank account in SA* </p>
+            <span class="font-weight200 margin-bottom">*2024 Solidarity Bank Charges Report</span>
+          </div><button mat-button class="orange-btn" routerLink="/verification">Open Account</button><button mat-button class="black-btn" routerLink="/backpage">Find out more</button>
+        </div>
+        <div fxLayout="column wrap" class="card-styles width-30" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true">
+          <div>
+            <span class="pay-font">EASY SMART</span>
+          </div><img imgSrc="/Web/Images/Card2.PNG" width="300px">
+          <div class="text-align column flex">
+            <span class="amount-font">R65 p.m</span>
+
+            <span class="grey-font">Required Income</span> <span class="font-w500">R0</span>
+          </div>
+          <div class="flex text-align">
+            <p class="font-w">FNB Easy Smart has the most <br> affordable online transactions (EFTs <br> &amp; debit orders) plus monthly reward <br> benefits </p>
+          </div><button mat-button class="orange-btn" routerLink="/backpage">Open Account</button><button mat-button class="black-btn" routerLink="/backpage">Find out more</button>
+        </div>
+        <div fxLayout="column wrap" class="card-styles width-30" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true">
+          <div class="flex">
+            <span class="pay-font">ASPIRE</span>
+          </div><img imgSrc="/Web/Images/Card.PNG" width="300px">
+          <div class="text-align column flex">
+            <span class="amount-font">From R99 p.m</span>
+
+            <span class="grey-font">Required Income</span> <span class="font-w500">R84 000</span>
+          </div>
+          <div class="text-align flex">
+            <p class="font-w">More value for you and your family,<br> with access to a credit facility at a <br> monthly account fee. </p>
+          </div><button mat-button class="orange-btn" routerLink="/backpage">Open Account</button><button mat-button class="black-btn" routerLink="/backpage">Find out more</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,48 @@
+<div fxLayout="column wrap" style="background-color:white" class="full-height full-width" fxLayoutAlign="start stretch" [fxShow]="true">
+  <div fxLayout="column wrap" style="background-color:green" class="height-10" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar style="background-color:white;height:64px" class="tool-box full-width">
+      <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+      <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+        <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      </div>
+      <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+      <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
+    </mat-toolbar></div>
+  <div fxLayout="column wrap" class="full-width height-80" fxLayoutAlign="center center" [fxShow]="true">
+    <div fxLayout="row wrap" style="width:80%" class="full-height" fxLayoutAlign="start stretch" [fxShow]="true">
+      <div fxLayout="column wrap" style="width:35%;margin-right: 15px" fxLayoutAlign="start stretch" [fxShow]="true">
+        <div style=" font-weight: 400; font-size: xx-large" class="text-align">
+          <p class="font-xxlarge font-w400">Log In</p>
+        </div>
+        <div fxLayout="row wrap" style="width:35%" class="relative-p" fxLayoutAlign="end stretch" [fxShow]="true"><img imgSrc="/Web/Images/login.PNG" style="height:170px; left:50px" class="absolute-p" width="200px"></div>
+      </div>
+      <div fxLayout="row wrap" style=";width:63%;padding:10px" fxLayoutAlign="start stretch" [fxShow]="true">
+        <h4>
+        </h4>
+        <p style="font-weight: 500;color:grey">
+          We have noticed you have a banking profile with us. We would like you to log in to proceed with taking up your chosen product</p>
+        <p style=" font-weight: 700;font-size: larger">
+          Enter your login details</p>
+        <form [formGroup]="page.loginForm" style="gap:1em">
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Username</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="username" [required]="true" formControlName="username">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Password</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput name="password" [required]="true" formControlName="password">
+
+            </mat-form-field>
+          </div>
+          <div fxLayout="column wrap" style="gap:1em" fxLayoutAlign="start stretch" [fxShow]="true"><button mat-button style="width:250px" class="continue-btn" (click)="submit()">Login</button><button mat-button style="width:250px" class="continue-btn" (click)="submit()">Forgot Password</button></div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="column wrap" class="footer-box height-10" fxLayoutAlign="center end" [fxShow]="true">
+    <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back-btn" (click)="goBack()" routerLink="/backpage">Back</button></div>
+  </div>
+</div>

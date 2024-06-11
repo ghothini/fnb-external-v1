@@ -1,0 +1,38 @@
+<div fxLayout="column wrap" style="background-color:white;height:100dvh" class="full-width" fxLayoutAlign="start stretch" [fxShow]="true"><mat-toolbar style="background-color:white;height:48px" class="tool-box full-width">
+    <div fxLayout="column wrap" style="width:5%" fxLayoutAlign="start start" [fxShow]="true"><img imgSrc="/Web/Images/FNB-new-logo-300x202.webp" width="50px"></div>
+    <div fxLayout="column wrap" style="width:20%" fxLayoutAlign="start start" [fxShow]="true">
+      <div fxLayout="row wrap" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+    </div>
+    <div fxLayout="column wrap" style="width:65%" fxLayoutAlign="start stretch" [fxShow]="true"></div>
+    <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
+  </mat-toolbar>
+  <div fxLayout="column wrap" style="height:calc(100% - 95px);padding:1em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column " class="scroll" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
+      <p style="font-size: xx-large" class="font-w400 no-margin">
+        FirstRand Relationship Agreement</p>
+      <p style="font-weight: 350;" class="no-margin green">
+        This summary briefly describes the key aspects of our relationship with you. The full agreement is presented in this section</p>
+      <p style="font-weight: 350;" class="no-margin">
+        The FirstRand Agreement (&quot;FRA&quot; or &quot;Agreement&quot;) regulates your relationship with FirstRand Bank Ltd (&quot;FRB&quot; or &quot;We&quot;), part of a group of companies called the FirstRand Group (&quot;FRG&quot; or &quot;Group&quot;)</p>
+      <div style="font-weight: 350;" class="no-margin">
+        A full explanation of the Group is available in the FirstRand Privacy Notice which you can find on our website.Please take the time to read and understand the full agreement before continuing with this process. The agreement contains legal disclaimers, indemnities and limitation of liability provisions which are important for you to know.</div>
+      <div style=";font-weight: 350;" class="no-margin">
+        During our relationship we may need to report information to or obtain information about you from, local and international tax authorities.We will need to access and collect necessary information about you held by third parties, such as credit bureaux, financial services provides and exchanges.</div>
+      <div style=";font-weight: 350;" class="no-margin">
+        Important categories of third parties include:
+        <ul>
+          <li>Data operators: such as the Department of Home Affairs to confirm your identity </li>
+          <li>Financial data exchanges such as Astute financial services exchange</li>
+          <li>SA Fraud Prevention Services for financial crime detection, prevention and prosecution purposes</li>
+        </ul>
+      </div>
+      <div style="font-weight: 350" class="no-margin">
+        <button class="fra-btn"><a href="https://drive.google.com/file/d/1Jl9wIaNYoNd98HZzy5aWCSxkNOm08bdD/view?usp=sharing">View Full FRA</a></button>
+      </div>
+      <div style="font-weight: 300;" class="no-margin">
+        I have read and understoond the FRA</div>
+      <div fxLayout="column wrap" style="height:15em" fxLayoutAlign="start stretch" [fxShow]="true"><n-signature style="width:200px;" [backgroundColor]="&apos;rgb(255,255,255)&apos;" [mode] [dotSize]="&apos;1&apos;" [minWidth]="&apos;0.5&apos;" [maxWidth]="&apos;2.5&apos;" [throttle]="&apos;16&apos;" [minDistance]="&apos;5&apos;" [penColor]="&apos;rgb(0,0,0)&apos;" [velocityFilterWeight]="&apos;0.7&apos;"></n-signature></div>
+    </div>
+  </div>
+  <div fxLayout="row wrap" style="flex:1" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="back-btn" routerLink="/home">Disagree</button><button mat-button class="continue-btn" (click)="submit()">Agree</button></div>
+</div>
