@@ -2,6 +2,7 @@
     "classes": [
         "orange",
         "green",
+        "grey-bg",
         "full-width",
         "half-width",
         "width-30",
@@ -16,6 +17,7 @@
         "no-margin",
         "margin-1",
         "margin-bottom",
+        "margin-bottom-7",
         "relative-p",
         "absolute-p",
         "padding-1",
@@ -57,7 +59,12 @@
         "font-w400",
         "font-large",
         "back-btn",
+        "back",
+        "mat-button-wrapper",
+        "disagree",
         "continue-btn",
+        "agree",
+        "continue",
         "mdc-text-field--filled",
         "mdc-text-field--disabled",
         "mat-form-field-infix",
@@ -78,6 +85,10 @@
         "loader",
         "loading",
         "main-container",
-        "mat-raised-button"
+        "margin-right",
+        "mat-raised-button",
+        "custom-file-upload",
+        "color-orange",
+        "margin-top-0"
     ]
 }

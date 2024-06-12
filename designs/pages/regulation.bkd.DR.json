@@ -2862,6 +2862,33 @@
                                 "_attrDef": "p"
                             }
                         ]
+                    },
+                    "06cc97f7-c0ba-a5b1-8f1c-39cd3894d3fb": {
+                        "paletteKey": "NEUTRINOS_VIEW_signaturePad",
+                        "parentEditorKey": "0e4305d7-03ed-fec7-e9a8-6543e6368d1a",
+                        "isCommented": "true",
+                        "commentid": "1718176625481",
+                        "designerReference": [
+                            {
+                                "_key": "componentLabel",
+                                "_value": "signaturePad",
+                                "_type": "kv",
+                                "_attrDef": "p",
+                                "_useAsLabel": true
+                            },
+                            {
+                                "_key": "style",
+                                "_value": "",
+                                "_type": "kv",
+                                "_attrDef": "p"
+                            },
+                            {
+                                "_key": "class",
+                                "_value": "",
+                                "_type": "dav",
+                                "_attrDef": "p"
+                            }
+                        ]
                     }
                 }
             }
@@ -2880,7 +2907,7 @@
                 },
                 {
                     "_key": "style",
-                    "_value": "flex:1",
+                    "_value": "flex:1; padding-right:10px;",
                     "_type": "kv",
                     "_attrDef": "p"
                 },
@@ -2943,6 +2970,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "disagree",
                             "back-btn"
                         ],
                         "_type": "dav",
@@ -3007,6 +3035,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "agree",
                             "continue-btn"
                         ],
                         "_type": "dav",

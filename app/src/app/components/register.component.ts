@@ -148,11 +148,22 @@ export class registerComponent {
       this.page.idUploadResult = undefined;
       this.page.isValidatedUpload = false;
       this.page.showSpinner = false;
-      bh = this.sd_Iu8ygKxUV790J4YD(bh);
+      bh = this.sd_vORJrk0WeWisxEdm(bh);
       //appendnew_next_sd_ZzOvZ6UEt9Cuxr6f
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_ZzOvZ6UEt9Cuxr6f');
+    }
+  }
+
+  sd_vORJrk0WeWisxEdm(bh) {
+    try {
+      this.page.results = JSON.parse(sessionStorage.getItem('User'));
+      bh = this.sd_Iu8ygKxUV790J4YD(bh);
+      //appendnew_next_sd_vORJrk0WeWisxEdm
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_vORJrk0WeWisxEdm');
     }
   }
 
@@ -418,7 +429,7 @@ export class registerComponent {
         name: new FormControl('', Validators.required),
         surname: new FormControl('', Validators.required),
         race: new FormControl('', Validators.required),
-        email: new FormControl('', [
+        email: new FormControl(page.results.email, [
           Validators.required,
           Validators.pattern(/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/),
         ]),
@@ -426,7 +437,7 @@ export class registerComponent {
         depedents: new FormControl('', Validators.required),
         marital: new FormControl('', Validators.required),
         qualification: new FormControl('', Validators.required),
-        country: new FormControl('', Validators.required),
+        country: new FormControl('South Africa', Validators.required),
         address: new FormControl('', Validators.required),
         sourceOfIncome: new FormControl('', Validators.required),
         additionalIncome: new FormControl(false),

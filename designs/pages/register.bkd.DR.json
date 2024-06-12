@@ -2718,7 +2718,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3252,7 +3252,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3703,7 +3703,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4154,7 +4154,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4688,7 +4688,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4951,7 +4951,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": "",
+                                        "_value": "{{page.results.email}}",
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -5012,7 +5012,7 @@
                                     },
                                     {
                                         "_key": "[disabled]",
-                                        "_value": "",
+                                        "_value": "true",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -5148,7 +5148,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -5682,7 +5682,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -6147,7 +6147,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -6390,8 +6390,8 @@
                                     ]
                                 }
                             },
-                            "7afdb71d-fdc9-8024-9191-ac3cf61badb1": {
-                                "paletteKey": "NG-Input",
+                            "1670df13-addb-a993-3832-8057524855a6": {
+                                "paletteKey": "NG-Select",
                                 "parentEditorKey": "c9b9c98e-2a2b-4325-ed8a-4219a8416cb6",
                                 "isAdvancedComponent": true,
                                 "commentid": null,
@@ -6409,6 +6409,18 @@
                                         "_attrDef": "p"
                                     },
                                     {
+                                        "_key": "innerMatSelectStyle",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "innerMatSelectClass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
                                         "_key": "placeholder",
                                         "_value": "",
                                         "_type": "kv",
@@ -6416,20 +6428,59 @@
                                         "_useAsLabel": true
                                     },
                                     {
-                                        "_key": "value",
+                                        "_key": "Label",
                                         "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[appearance]",
-                                        "_value": "'fill'",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "[required]",
-                                        "_value": "false",
+                                        "_key": "datasource",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[groupOptions]",
+                                        "_value": "noGroup",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[groupLabels]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "[disableGroup]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p",
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "[optionDatasource]",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "optionValue",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "optionView",
+                                        "_value": "",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "formControlName",
+                                        "_value": "income",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -6440,45 +6491,21 @@
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "color",
+                                        "_key": "[(value)]",
                                         "_value": "",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "name",
-                                        "_value": "",
+                                        "_key": "[required]",
+                                        "_value": "true",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "type",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[formControl]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "readonly",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "[disabled]",
-                                        "_value": "",
-                                        "_type": "kv",
-                                        "_attrDef": "p"
-                                    },
-                                    {
-                                        "_key": "id",
-                                        "_value": "",
-                                        "_type": "kv",
+                                        "_key": "[appearance]",
+                                        "_value": "'fill'",
+                                        "_type": "a",
                                         "_attrDef": "p"
                                     },
                                     {
@@ -6488,11 +6515,129 @@
                                         "_attrDef": "p"
                                     },
                                     {
-                                        "_key": "[hideRequiredMarker]",
-                                        "_value": "false",
+                                        "_key": "[disableRipple]",
+                                        "_value": "",
                                         "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "multiple",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "CustomTriggerValue",
+                                        "_value": "",
+                                        "_type": "a",
                                         "_attrDef": "p",
-                                        "_complexity": "advanced"
+                                        "_visibility": false
+                                    },
+                                    {
+                                        "_key": "(openedChange)",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "(selectionChange)",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "selectCustomOption",
+                                        "_value": [
+                                            {
+                                                "input1": "Not Applicble",
+                                                "input2": "Not Applicable",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "0 - R50 000",
+                                                "input2": "0 - R50 000",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "R51 000 - R90 000",
+                                                "input2": "R51 000 - R90 000",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "R91 000 - R180 000",
+                                                "input2": "R91 000 - R180 000",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "R181 000 - R250 000",
+                                                "input2": "R181 000 - R250 000",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "R251 000 - R450 000",
+                                                "input2": "R251 000 - R450 000",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            },
+                                            {
+                                                "input1": "R451 000 - above",
+                                                "input2": "R451 000 - above",
+                                                "toggle": {
+                                                    "toggleData": [],
+                                                    "selected": "false"
+                                                }
+                                            }
+                                        ],
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "selectStyle",
+                                        "_value": "Basic",
+                                        "_type": "a",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "panelClass",
+                                        "_value": "",
+                                        "_type": "dav",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[disabled]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "[errorStateMatcher]",
+                                        "_value": "",
+                                        "_type": "kv",
+                                        "_attrDef": "p"
+                                    },
+                                    {
+                                        "_key": "option",
+                                        "_value": "option",
+                                        "_type": "a",
+                                        "_attrDef": "p",
+                                        "_visibility": false
                                     },
                                     {
                                         "_key": "matError",
@@ -6500,68 +6645,6 @@
                                         "_type": "a",
                                         "_attrDef": "p",
                                         "_visibility": true
-                                    },
-                                    {
-                                        "_key": "inputHint",
-                                        "_value": [],
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "Label",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "Suffix Icon",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "(suffixIconClick)",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "Prefix Icon",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "(prefixIconClick)",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "Prefix",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "Suffix",
-                                        "_value": "",
-                                        "_type": "a",
-                                        "_attrDef": "p",
-                                        "_visibility": true
-                                    },
-                                    {
-                                        "_key": "formControlName",
-                                        "_value": "income",
-                                        "_type": "kv",
-                                        "_attrDef": "c"
                                     }
                                 ]
                             }
@@ -6598,7 +6681,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -7201,7 +7284,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "margin-bottom:7px;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -7405,32 +7488,6 @@
                                             "_attrDef": "p"
                                         }
                                     ]
-                                },
-                                "de28c46a-9b23-c5a2-3b47-5e1fc6e11cbe": {
-                                    "paletteKey": "html-editor",
-                                    "parentEditorKey": "9461e878-e723-93b0-dce3-6359d2a5d2c0",
-                                    "isAdvancedChildComponent": true,
-                                    "commentid": null,
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "html",
-                                            "_value": "",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
                                 }
                             },
                             "b8c3493a-48a6-8695-cada-4f5ff1497ad6": {
@@ -7579,7 +7636,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": "",
+                                        "_value": "South Africa",
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -7640,7 +7697,7 @@
                                     },
                                     {
                                         "_key": "[disabled]",
-                                        "_value": "",
+                                        "_value": "true",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -8040,7 +8097,7 @@
                                 "designerReference": [
                                     {
                                         "_key": "style",
-                                        "_value": "",
+                                        "_value": "margin-bottom:10px;",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },
@@ -8454,7 +8511,7 @@
                                 },
                                 {
                                     "_key": "fxLayoutGap",
-                                    "_value": "",
+                                    "_value": ".5em",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -8691,33 +8748,6 @@
                                         {
                                             "_key": "html",
                                             "_value": "Primary source of income",
-                                            "_type": "a",
-                                            "_attrDef": "p"
-                                        }
-                                    ]
-                                },
-                                "04ce3fc5-f0fd-6cd9-a8ab-672d8e637941": {
-                                    "paletteKey": "html-editor",
-                                    "parentEditorKey": "67da96b5-e1d8-9a47-4edb-70baeba35dee",
-                                    "isAdvancedChildComponent": true,
-                                    "isCommented": "true",
-                                    "commentid": "1717523729588",
-                                    "designerReference": [
-                                        {
-                                            "_key": "style",
-                                            "_value": "",
-                                            "_type": "kv",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "class",
-                                            "_value": "",
-                                            "_type": "dav",
-                                            "_attrDef": "p"
-                                        },
-                                        {
-                                            "_key": "html",
-                                            "_value": "",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10131,7 +10161,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>Please upload ID Document</p>",
+                                            "_value": "<p class=\"margin-bottom-7\">Please upload ID Document</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10157,7 +10187,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<!-- <mat-label>clear unfiltered selfie</mat-label> -->\r\n  <input  id=\"uploadedFile1\"  (change)='fileUpload($event, \"ID\")' type=\"file\" required >",
+                                            "_value": "<label class=\"custom-file-upload color-orange\">\r\n  <input  id=\"uploadedFile1\"  (change)='fileUpload($event, \"ID\")' type=\"file\" required >Upload here<br><br>\r\n  {{page.registerForm.value.idFileName}}\r\n</label>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10178,7 +10208,7 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "",
+                                        "_value": [],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     },
@@ -10371,7 +10401,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<p>Please upload Pay slip",
+                                            "_value": "<p class=\"margin-bottom-7 margin-top-0\">Please upload Pay slip</p>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10397,7 +10427,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<input  id=\"uploadedFile2\"  (change)='fileUpload($event, \"POP\")' type=\"file\" required >",
+                                            "_value": "<label class=\"custom-file-upload color-orange\">\r\n    <input  id=\"uploadedFile2\" (change)='fileUpload($event, \"POP\")' type=\"file\" required >Upload here<br><br>\r\n    {{page.registerForm.value.paySlipFileName}}\r\n</label>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10486,7 +10516,7 @@
                     },
                     {
                         "_key": "style",
-                        "_value": "",
+                        "_value": "margin-right:10px;",
                         "_type": "kv",
                         "_attrDef": "p"
                     },
@@ -10547,6 +10577,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "back",
                                 "back-btn"
                             ],
                             "_type": "dav",
@@ -10618,6 +10649,7 @@
                         {
                             "_key": "class",
                             "_value": [
+                                "continue",
                                 "continue-btn"
                             ],
                             "_type": "dav",

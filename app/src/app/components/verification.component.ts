@@ -272,7 +272,7 @@ export class verificationComponent {
           undefined
         )
       ) {
-        bh = this.sd_Zj9irMRjFofwgYJ3(bh);
+        bh = this.sd_XlEqKw1G5Nm5LWTd(bh);
       } else {
         bh = await this.sd_tbYpneKzV7YDbt5E(bh);
       }
@@ -280,6 +280,20 @@ export class verificationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_3EFJNXA4KS1Itfik');
+    }
+  }
+
+  sd_XlEqKw1G5Nm5LWTd(bh) {
+    try {
+      sessionStorage.setItem(
+        'User',
+        JSON.stringify(this.page.verificationForm.value)
+      );
+      bh = this.sd_Zj9irMRjFofwgYJ3(bh);
+      //appendnew_next_sd_XlEqKw1G5Nm5LWTd
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_XlEqKw1G5Nm5LWTd');
     }
   }
 
