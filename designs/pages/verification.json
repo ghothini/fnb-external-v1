@@ -251,7 +251,7 @@
         "y": 380,
         "wires": [
             [
-                "sd_Zj9irMRjFofwgYJ3"
+                "sd_XlEqKw1G5Nm5LWTd"
             ],
             [
                 "sd_tbYpneKzV7YDbt5E"
@@ -279,8 +279,8 @@
         "resultMapping": "",
         "functionName": "sd_Zj9irMRjFofwgYJ3",
         "category": "Navigation",
-        "x": 805,
-        "y": 340,
+        "x": 905,
+        "y": 320,
         "wires": [
             []
         ],
@@ -347,7 +347,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -505,7 +507,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -603,7 +607,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -795,7 +801,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -807,6 +815,39 @@
         "y": 440,
         "wires": [
             []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_XlEqKw1G5Nm5LWTd",
+        "type": "Storage",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "User"
+        },
+        "value": {
+            "type": "this.page",
+            "value": "verificationForm.value"
+        },
+        "resultMapping": {},
+        "functionName": "sd_XlEqKw1G5Nm5LWTd",
+        "category": "Storage",
+        "x": 805,
+        "y": 340,
+        "wires": [
+            [
+                "sd_Zj9irMRjFofwgYJ3"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

@@ -34,5 +34,5 @@
       <div fxLayout="column wrap" style="height:15em" fxLayoutAlign="start stretch" [fxShow]="true"><n-signature style="width:200px;" [backgroundColor]="&apos;rgb(255,255,255)&apos;" [mode] [dotSize]="&apos;1&apos;" [minWidth]="&apos;0.5&apos;" [maxWidth]="&apos;2.5&apos;" [throttle]="&apos;16&apos;" [minDistance]="&apos;5&apos;" [penColor]="&apos;rgb(0,0,0)&apos;" [velocityFilterWeight]="&apos;0.7&apos;"></n-signature></div>
     </div>
   </div>
-  <div fxLayout="row wrap" style="flex:1" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="back-btn" routerLink="/home">Disagree</button><button mat-button class="continue-btn" (click)="submit()">Agree</button></div>
+  <div fxLayout="row wrap" style="flex:1; padding-right:10px;" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="disagree back-btn" routerLink="/home">Disagree</button><button mat-button class="agree continue-btn" (click)="submit()">Agree</button></div>
 </div>
