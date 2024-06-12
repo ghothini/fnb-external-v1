@@ -177,7 +177,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "// page.canvas = document.querySelector(\"canvas\") as HTMLCanvasElement;\n// page.signaturePad = new SignaturePad(page.canvas);",
+        "script": "page.canvas = document.querySelector(\"canvas\");\npage.signaturePad = new SignaturePad(page.canvas);\npage.signaturePad.dotSize = 10;",
         "functionName": "sd_f3W8q09BJ3zS5M8Z",
         "category": "Function",
         "x": 345,
@@ -320,7 +320,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""

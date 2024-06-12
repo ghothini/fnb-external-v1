@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import  SignaturePad  from 'signature_pad'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -126,8 +127,10 @@ export class signaturePadComponent {
 
   sd_f3W8q09BJ3zS5M8Z(bh) {
     try {
-      const page = this.page; // page.canvas = document.querySelector("canvas") as HTMLCanvasElement;
-      // page.signaturePad = new SignaturePad(page.canvas);
+      const page = this.page;
+      page.canvas = document.querySelector('canvas');
+      page.signaturePad = new SignaturePad(page.canvas);
+      page.signaturePad.dotSize = 10;
       this.sd_Kn9shEn1VPkknnpe(bh);
       //appendnew_next_sd_f3W8q09BJ3zS5M8Z
       return bh;
