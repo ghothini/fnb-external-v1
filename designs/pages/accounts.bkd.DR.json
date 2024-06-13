@@ -3510,7 +3510,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": " <p class=\"font-w\">FNB Easy Smart has the most <br> affordable online transactions (EFTs <br> & debit orders) plus monthly reward <br> benefits </p>\r\n",
+                                        "_value": " <p class=\"font-w margin-bottom-0\">FNB Easy Smart has the most <br> affordable online transactions (EFTs <br> & debit orders) plus monthly reward <br> benefits </p>\r\n",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -3589,7 +3589,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "color:grey !important;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3622,7 +3622,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "true",
+                                    "_value": "false",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3661,7 +3661,7 @@
                             },
                             {
                                 "_key": "style",
-                                "_value": "",
+                                "_value": "padding:10px;",
                                 "_type": "kv",
                                 "_attrDef": "p"
                             },
@@ -3920,7 +3920,7 @@
                                     },
                                     {
                                         "_key": "html",
-                                        "_value": " <span class=\"pay-font\">ASPIRE</span> ",
+                                        "_value": " <span class=\"pay-font margin-bottom-0\">ASPIRE</span> ",
                                         "_type": "a",
                                         "_attrDef": "p"
                                     }
@@ -4554,7 +4554,7 @@
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "",
+                                    "_value": "color:grey !important;",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4587,7 +4587,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "true",
+                                    "_value": "false",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },

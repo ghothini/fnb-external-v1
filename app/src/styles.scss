@@ -32,7 +32,7 @@ $grey: #c4d2d7;
 }
 
 .grey-bg {
-    background-color: $background-blue !important;
+    background-color: $grey !important;
 }
 
 //width
@@ -539,6 +539,10 @@ mat-snack-bar-container {
 // Margins
 .margin-right {
     margin-right:10px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
 }
 
 //internal admin
