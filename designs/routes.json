@@ -16,15 +16,18 @@
         },
         {
             "component": "registerComponent",
-            "path": "register"
+            "path": "register",
+            "data": ""
         },
         {
             "component": "verificationComponent",
-            "path": "verification"
+            "path": "verification",
+            "data": ""
         },
         {
             "component": "signaturePadComponent",
-            "path": "signaturePad"
+            "path": "signaturePad",
+            "data": ""
         },
         {
             "path": "login",

@@ -1698,7 +1698,6 @@
                     "e2cea3ed-b685-4129-147d-a2695a9b2b92": {
                         "paletteKey": "FlexLayoutCol",
                         "parentEditorKey": "50628a62-f634-82b5-8985-b6e822e84cfa",
-                        "isCommented": "false",
                         "commentid": null,
                         "designerReference": [
                             {
@@ -1764,7 +1763,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -1952,7 +1950,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "17d007a6-c8c5-13bc-aab2-420a1ebbbabd",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -1979,7 +1976,6 @@
                         "05f49f9d-1e39-f1cb-0954-2f8fad81ce31": {
                             "paletteKey": "NG-image",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2049,7 +2045,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2241,7 +2236,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "9b4c6dc0-4d5e-90dd-cd10-63a650827cb9",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2268,7 +2262,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "9b4c6dc0-4d5e-90dd-cd10-63a650827cb9",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2295,7 +2288,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "9b4c6dc0-4d5e-90dd-cd10-63a650827cb9",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2323,7 +2315,6 @@
                             "paletteKey": "Html5",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
                             "isAdvancedComponent": true,
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2515,7 +2506,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "c17729db-9157-0914-d87d-c8bd23257e5d",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2542,7 +2532,6 @@
                                 "paletteKey": "html-editor",
                                 "parentEditorKey": "c17729db-9157-0914-d87d-c8bd23257e5d",
                                 "isAdvancedChildComponent": true,
-                                "isCommented": "false",
                                 "commentid": null,
                                 "designerReference": [
                                     {
@@ -2569,7 +2558,6 @@
                         "025cef7e-e5e8-a304-8c01-917ddc31dda5": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -2634,7 +2622,6 @@
                         "6015721d-c8c4-0bb7-de3f-112f536c441f": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
-                            "isCommented": "false",
                             "commentid": null,
                             "designerReference": [
                                 {
@@ -3544,7 +3531,8 @@
                                 {
                                     "_key": "class",
                                     "_value": [
-                                        "orange-btn"
+                                        "orange-btn",
+                                        "white"
                                     ],
                                     "_type": "dav",
                                     "_attrDef": "p"
@@ -3570,7 +3558,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "",
+                                    "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3608,7 +3596,8 @@
                                 {
                                     "_key": "class",
                                     "_value": [
-                                        "black-btn"
+                                        "black-btn",
+                                        "white"
                                     ],
                                     "_type": "dav",
                                     "_attrDef": "p"
@@ -3634,7 +3623,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "",
+                                    "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },

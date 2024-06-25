@@ -140,8 +140,8 @@
         ],
         "functionName": "sd_zUiYQYNk75jvOV56",
         "category": "General",
-        "x": 365,
-        "y": 380,
+        "x": 345,
+        "y": 400,
         "wires": [
             [
                 "sd_4BPBswPMMDEJOWBi"
@@ -162,8 +162,8 @@
         "script": "bh.url = bh.ssdUrl + 'verification' \npage.showSpinner = true;",
         "functionName": "sd_4BPBswPMMDEJOWBi",
         "category": "Function",
-        "x": 465,
-        "y": 380,
+        "x": 445,
+        "y": 400,
         "wires": [
             [
                 "sd_D1onDjTy0vXPQwqZ"
@@ -182,6 +182,7 @@
         "nodeType": "flow",
         "name": "verify",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -189,8 +190,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -206,14 +209,16 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "verify",
         "category": "HTTP",
-        "x": 545,
-        "y": 380,
+        "x": 525,
+        "y": 400,
         "wires": [
             [
                 "sd_5LOcpmg28zZ5lQnz"
@@ -247,8 +252,8 @@
         "outputs": 2,
         "functionName": "sd_3EFJNXA4KS1Itfik",
         "category": "Function",
-        "x": 705,
-        "y": 380,
+        "x": 685,
+        "y": 400,
         "wires": [
             [
                 "sd_Zj9irMRjFofwgYJ3"
@@ -270,16 +275,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "resultMapping": {
+            "type": "this.page",
+            "value": "verificationForm.value"
+        },
         "functionName": "sd_Zj9irMRjFofwgYJ3",
         "category": "Navigation",
-        "x": 805,
+        "x": 785,
         "y": 340,
         "wires": [
             []
@@ -312,8 +314,8 @@
         "outputs": 2,
         "functionName": "sd_vYxVeJqQDCgfF20a",
         "category": "Function",
-        "x": 265,
-        "y": 400,
+        "x": 245,
+        "y": 420,
         "wires": [
             [
                 "sd_zUiYQYNk75jvOV56"
@@ -347,7 +349,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -355,8 +359,8 @@
         "direction": "ltr",
         "functionName": "sd_vF3oHlpAdQkzoAEn",
         "category": "General",
-        "x": 385,
-        "y": 480,
+        "x": 365,
+        "y": 500,
         "wires": [
             []
         ],
@@ -505,7 +509,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -603,7 +609,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -763,8 +771,8 @@
         "script": "if(page.result.message){\n    bh.isAddingAccount = true;\n} else {\n    bh.isAddingAccount = false;\n}\npage.showSpinner = false;",
         "functionName": "sd_5LOcpmg28zZ5lQnz",
         "category": "Function",
-        "x": 625,
-        "y": 380,
+        "x": 605,
+        "y": 400,
         "wires": [
             [
                 "sd_3EFJNXA4KS1Itfik"
@@ -803,8 +811,8 @@
         "direction": "ltr",
         "functionName": "sd_tbYpneKzV7YDbt5E",
         "category": "General",
-        "x": 805,
-        "y": 440,
+        "x": 785,
+        "y": 460,
         "wires": [
             []
         ],

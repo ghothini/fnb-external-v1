@@ -31,6 +31,16 @@ $grey: #c4d2d7;
     color: $green-d;
 }
 
+.grey-bg{
+    background-color: $grey !important;
+}
+
+.white{
+    color: $white !important
+}
+
+
+
 //width
 .full-width{
     width: 100%;
@@ -173,9 +183,18 @@ margin-bottom: 5px;
 .font{
     font-size: 2em;
 }
+
 .orange-btn{
     border-radius: 15px !important;
-    background-color:$orange;
+    background-color:$grey !important;
+    color: white;
+    width: 120px;
+    height: 30px;
+}
+
+.grey-btn{
+    background-color: $grey;
+    border-radius: 15px !important;
     color: white;
     width: 120px;
     height: 30px;

@@ -435,6 +435,7 @@ export class registerComponent {
         idFileName: new FormControl(''),
         paySlipDocument: new FormControl(''),
         paySlipFileName: new FormControl(''),
+        password: new FormControl(''),
       });
 
       //appendnew_next_sd_Iu8ygKxUV790J4YD
