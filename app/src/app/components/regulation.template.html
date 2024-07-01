@@ -7,7 +7,7 @@
     <div fxLayout="column wrap" style="width:10%" fxLayoutGap="5em" fxLayoutAlign="end end" [fxShow]="true"></div>
   </mat-toolbar>
   <div fxLayout="column wrap" style="height:calc(100% - 95px);padding:1em" fxLayoutAlign="start stretch" [fxShow]="true">
-    <div fxLayout="column " class="scroll" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
+    <div fxLayout="column " fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
       <p style="font-size: xx-large" class="font-w400 no-margin">
         FirstRand Relationship Agreement</p>
       <p style="font-weight: 350;" class="no-margin green">
@@ -29,10 +29,11 @@
       <div style="font-weight: 350" class="no-margin">
         <button class="fra-btn"><a href="https://drive.google.com/file/d/1Jl9wIaNYoNd98HZzy5aWCSxkNOm08bdD/view?usp=sharing">View Full FRA</a></button>
       </div>
-      <div style="font-weight: 300;" class="no-margin">
-        I have read and understoond the FRA</div>
-      <div fxLayout="column wrap" style="height:15em" fxLayoutAlign="start stretch" [fxShow]="true"><n-signature style="width:200px;" [backgroundColor]="&apos;rgb(255,255,255)&apos;" [mode] [dotSize]="&apos;1&apos;" [minWidth]="&apos;0.5&apos;" [maxWidth]="&apos;2.5&apos;" [throttle]="&apos;16&apos;" [minDistance]="&apos;5&apos;" [penColor]="&apos;rgb(0,0,0)&apos;" [velocityFilterWeight]="&apos;0.7&apos;"></n-signature></div>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><mat-checkbox [required]="false"></mat-checkbox>
+        <div style="font-weight: 300;" class="no-margin">
+          I have read and understoond the FRA</div>
+      </div>
     </div>
   </div>
-  <div fxLayout="row wrap" style="flex:1" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="back-btn" routerLink="/home">Disagree</button><button mat-button class="continue-btn" (click)="submit()">Agree</button></div>
+  <div fxLayout="row wrap" style="flex:1; padding-right:10px;" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="disagree back-btn" routerLink="/home">Disagree</button><button mat-button class="agree continue-btn" (click)="submit()">Agree</button></div>
 </div>

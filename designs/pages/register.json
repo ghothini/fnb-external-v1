@@ -122,7 +122,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_Iu8ygKxUV790J4YD"
+                "sd_vORJrk0WeWisxEdm"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -320,10 +320,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.stateGroups = [\n  { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },\n  { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },\n  { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },\n  { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },\n  { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },\n  { letter: 'F', names: ['Fiji', 'Finland', 'France'] },\n  { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },\n  { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },\n  { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },\n  { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },\n  { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },\n  { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },\n  { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },\n  { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },\n  { letter: 'O', names: ['Oman'] },\n  { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },\n  { letter: 'Q', names: ['Qatar'] },\n  { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },\n  { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },\n  { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },\n  { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },\n  { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },\n  { letter: 'Y', names: ['Yemen'] },\n  { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }\n]\n\n\n\n\n\n\n\npage.registerForm = new FormGroup({\n  _id: new FormControl(new Date().getTime()),\n  createDate: new FormControl(new Date()),\n  title: new FormControl('',Validators.required),\n  name: new FormControl('',Validators.required),\n  surname: new FormControl('',Validators.required),\n  race: new FormControl('',Validators.required),\n  email: new FormControl('',[Validators.required,Validators.pattern(/^[^\\s@]+@([^\\s@.,]+\\.)+[^\\s@.,]{2,}$/)]),\n  income: new FormControl('',Validators.required),\n  depedents: new FormControl('',Validators.required),\n  marital: new FormControl('',Validators.required),\n  qualification: new FormControl('',Validators.required),\n  country: new FormControl('',Validators.required),\n  address: new FormControl('',Validators.required),\n  sourceOfIncome: new FormControl('',Validators.required),\n  additionalIncome: new FormControl(false),\n  tax: new FormControl(false),\n  idDocument: new FormControl(''),\n  idFileName: new FormControl(''),\n  paySlipDocument: new FormControl(''),\n  paySlipFileName: new FormControl(''),\n  password: new FormControl('')\n});\n\n\n\n",
+        "script": "page.stateGroups = [\n  { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },\n  { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },\n  { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },\n  { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },\n  { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },\n  { letter: 'F', names: ['Fiji', 'Finland', 'France'] },\n  { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },\n  { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },\n  { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },\n  { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },\n  { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },\n  { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },\n  { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },\n  { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },\n  { letter: 'O', names: ['Oman'] },\n  { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },\n  { letter: 'Q', names: ['Qatar'] },\n  { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },\n  { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },\n  { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },\n  { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },\n  { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },\n  { letter: 'Y', names: ['Yemen'] },\n  { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }\n]\n\n\n\n\n\n\n\npage.registerForm = new FormGroup({\n  _id: new FormControl(new Date().getTime()),\n  createDate: new FormControl(new Date()),\n  title: new FormControl('',Validators.required),\n  name: new FormControl('',Validators.required),\n  surname: new FormControl('',Validators.required),\n  race: new FormControl('',Validators.required),\n  email: new FormControl(page.results.email,[Validators.required,Validators.pattern(/^[^\\s@]+@([^\\s@.,]+\\.)+[^\\s@.,]{2,}$/)]),\n  income: new FormControl('',Validators.required),\n  depedents: new FormControl('',Validators.required),\n  marital: new FormControl('',Validators.required),\n  qualification: new FormControl('',Validators.required),\n  country: new FormControl( 'South Africa' ,Validators.required),\n  address: new FormControl('',Validators.required),\n  sourceOfIncome: new FormControl('',Validators.required),\n  additionalIncome: new FormControl(false),\n  tax: new FormControl(false),\n  idDocument: new FormControl(''),\n  idFileName: new FormControl(''),\n  paySlipDocument: new FormControl(''),\n  paySlipFileName: new FormControl(''),\n});\n\n\n\n",
         "functionName": "sd_Iu8ygKxUV790J4YD",
         "category": "Function",
-        "x": 365,
+        "x": 465,
         "y": 40,
         "wires": [
             []
@@ -357,7 +357,7 @@
         "functionName": "sd_eWumEgN06CVxqsEc",
         "category": "Function",
         "x": 165,
-        "y": 560,
+        "y": 554,
         "wires": [
             [
                 "sd_2461cxLecc33OmmS"
@@ -1088,6 +1088,39 @@
         "wires": [
             [
                 "sd_gQZAvvRMz5G5uysH"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_vORJrk0WeWisxEdm",
+        "type": "Storage",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "User"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "results"
+        },
+        "functionName": "sd_vORJrk0WeWisxEdm",
+        "category": "Storage",
+        "x": 365,
+        "y": 40,
+        "wires": [
+            [
+                "sd_Iu8ygKxUV790J4YD"
             ]
         ],
         "__n_excludedFromValidation__": {},

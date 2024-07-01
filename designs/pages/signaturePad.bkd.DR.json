@@ -74,6 +74,7 @@
                 {
                     "_key": "class",
                     "_value": [
+                        "color-orange",
                         "no-margin",
                         "white"
                     ],
@@ -352,6 +353,7 @@
                     {
                         "_key": "class",
                         "_value": [
+                            "grey-bg",
                             "full-width"
                         ],
                         "_type": "dav",

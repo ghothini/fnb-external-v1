@@ -23,7 +23,7 @@
         <p style="margin-top:0" class="font-w400">
           Your cellphone number will be linked to your account. FNB makes sure your information is kept safe and secure.</p>
         <form [formGroup]="page.registerForm" style="gap:1em">
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Title</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
@@ -33,21 +33,21 @@
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               First Name</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput [required]="false" formControlName="name">
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Surname</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput [required]="false" formControlName="surname">
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Ethnic group</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
@@ -57,14 +57,14 @@
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Email address</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput [required]="true" formControlName="email">
+              <input matInput placeholder="{{page.results.email}}" [required]="true" formControlName="email" [disabled]="true">
               <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Marital status</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
@@ -74,21 +74,22 @@
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Number of dependants</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput type="number" [required]="false" formControlName="depedents" (input)="validateNoDependents()">
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true"><label>
-              Annual Gross income</label>
-            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput [required]="false" formControlName="income">
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Annual Gross income</label><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
+              <mat-label></mat-label>
+              <mat-select formControlName="income" [required]="true">
+                <mat-option [value]="&apos;Not Applicable&apos;" disabled="false">Not Applicble</mat-option><mat-option [value]="&apos;0 - R50 000&apos;" disabled="false">0 - R50 000</mat-option><mat-option [value]="&apos;R51 000 - R90 000&apos;" disabled="false">R51 000 - R90 000</mat-option><mat-option [value]="&apos;R91 000 - R180 000&apos;" disabled="false">R91 000 - R180 000</mat-option><mat-option [value]="&apos;R181 000 - R250 000&apos;" disabled="false">R181 000 - R250 000</mat-option><mat-option [value]="&apos;R251 000 - R450 000&apos;" disabled="false">R251 000 - R450 000</mat-option><mat-option [value]="&apos;R451 000 - above&apos;" disabled="false">R451 000 - above</mat-option>
+              </mat-select>
 
-            </mat-form-field>
-          </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+            </mat-form-field></div>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Higest level of qualification</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
@@ -99,7 +100,7 @@
             </mat-form-field>
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
-            <div>
+            <div style="margin-bottom:7px;">
               Country of birth</div><mat-autocomplete #auto="matAutocomplete">
               <mat-optgroup *ngFor="let group of page.filteredOptions " [label]="group.letter">
                 <mat-option *ngFor="let option of group.names; let p = index;" [value]="option">
@@ -108,20 +109,20 @@
               </mat-optgroup>
             </mat-autocomplete>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput [required]="false" [matAutocomplete]="auto" (input)="filterData($event)" formControlName="country">
+              <input matInput placeholder="South Africa" [required]="false" [matAutocomplete]="auto" (input)="filterData($event)" formControlName="country" [disabled]="true">
 
             </mat-form-field>
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <h5>
-              Address</h5><label>
+              Address</h5><label style="margin-bottom:10px;">
               Address</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
               <input matInput [required]="false" formControlName="address">
 
             </mat-form-field>
           </div>
-          <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Primary source of income</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
@@ -141,11 +142,16 @@
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
-              <p>Please upload ID Document</p><!-- <mat-label>clear unfiltered selfie</mat-label> -->
-              <input id="uploadedFile1" (change)="fileUpload($event, &quot;ID&quot;)" type="file" required>
+              <p class="margin-bottom-7">Please upload ID Document</p><label class="custom-file-upload color-orange">
+                <input id="uploadedFile1" (change)="fileUpload($event, &quot;ID&quot;)" type="file" required>Upload here<br><br>
+                {{page.registerForm.value.idFileName}}
+              </label>
             </div>
             <div>
-              <p>Please upload Pay slip</p><input id="uploadedFile2" (change)="fileUpload($event, &quot;POP&quot;)" type="file" required>
+              <p class="margin-bottom-7 margin-top-0">Please upload Pay slip</p><label class="custom-file-upload color-orange">
+                <input id="uploadedFile2" (change)="fileUpload($event, &quot;POP&quot;)" type="file" required>Upload here<br><br>
+                {{page.registerForm.value.paySlipFileName}}
+              </label>
             </div>
           </div>
         </form>
@@ -153,6 +159,6 @@
     </div>
   </div>
   <div fxLayout="column wrap" style="height:7%" class="footer-box" fxLayoutAlign="center end" [fxShow]="true">
-    <div fxLayout="row wrap" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back-btn" (click)="goBack()">Back</button><button mat-button class="continue-btn" (click)="submit()">Continue</button></div>
+    <div fxLayout="row wrap" style="margin-right:10px;" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back back-btn" (click)="goBack()">Back</button><button mat-button class="continue continue-btn" (click)="submit()">Continue</button></div>
   </div>
 </div>
