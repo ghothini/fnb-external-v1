@@ -57,7 +57,22 @@ export class regulationComponent {
     }
   }
 
-  submit(...others) {
+  submit(form: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { form };
+      bh.local = {};
+      bh = this.sd_a9oNpJZtVEuT3LUA(bh);
+      //appendnew_next_submit
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_OvrEB4pafD6TtOXo');
+    }
+  }
+
+  disagree(...others) {
     let bh: any = {};
     try {
       bh = this.__page_injector__
@@ -65,10 +80,10 @@ export class regulationComponent {
         .constructFlowObject(this);
       bh.input = {};
       bh.local = {};
-      bh = this.sd_g9qp3nwYlXcyMm4S(bh);
-      //appendnew_next_submit
+      bh = this.sd_lXyRgsA130Jn3aoY(bh);
+      //appendnew_next_disagree
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_OvrEB4pafD6TtOXo');
+      return this.errorHandler(bh, e, 'sd_bUOnXMDTHtOaWVh2');
     }
   }
   //appendnew_flow_regulationComponent_start
@@ -79,10 +94,70 @@ export class regulationComponent {
       this.page.imageData = [];
       this.page.Signature = undefined;
       this.page.data = undefined;
+      this.page.checkForm = undefined;
+      bh = this.sd_c4fxdNmR9QDXBFiB(bh);
       //appendnew_next_sd_xROL0Y2fL8shU23C
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_xROL0Y2fL8shU23C');
+    }
+  }
+
+  sd_c4fxdNmR9QDXBFiB(bh) {
+    try {
+      this.page.user = JSON.parse(sessionStorage.getItem('User'));
+      bh = this.sd_4ysxRLck0ldIbEvh(bh);
+      //appendnew_next_sd_c4fxdNmR9QDXBFiB
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_c4fxdNmR9QDXBFiB');
+    }
+  }
+
+  sd_4ysxRLck0ldIbEvh(bh) {
+    try {
+      const page = this.page;
+      page.checkForm = {
+        checkBox: '',
+      };
+      console.log(page.checkForm);
+      //appendnew_next_sd_4ysxRLck0ldIbEvh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_4ysxRLck0ldIbEvh');
+    }
+  }
+
+  async sd_a9oNpJZtVEuT3LUA(bh) {
+    try {
+      if (
+        this.sdService.operators['eq'](
+          bh.input.form.status,
+          'VALID',
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_TTGTz5bhDRy0z9wV(bh);
+      } else {
+        bh = await this.sd_fRCO5JdPJo23WCOy(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_a9oNpJZtVEuT3LUA');
+    }
+  }
+
+  sd_TTGTz5bhDRy0z9wV(bh) {
+    try {
+      const page = this.page;
+      console.log(bh.input.form);
+      bh = this.sd_g9qp3nwYlXcyMm4S(bh);
+      //appendnew_next_sd_TTGTz5bhDRy0z9wV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_TTGTz5bhDRy0z9wV');
     }
   }
 
@@ -96,7 +171,6 @@ export class regulationComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
-      bh = this.sd_RRaQEP3tCMNSlNQZ(bh);
       //appendnew_next_sd_g9qp3nwYlXcyMm4S
       return bh;
     } catch (e) {
@@ -104,7 +178,73 @@ export class regulationComponent {
     }
   }
 
-  async sd_RRaQEP3tCMNSlNQZ(bh) {
+  sd_fRCO5JdPJo23WCOy(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Checkbox is not checked', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_fRCO5JdPJo23WCOy
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_fRCO5JdPJo23WCOy');
+    }
+  }
+
+  sd_lXyRgsA130Jn3aoY(bh) {
+    try {
+      this.page.ssdURL = bh.system.environment.properties.ssdURL;
+      bh = this.sd_kmJ6eAkC89PMiJgV(bh);
+      //appendnew_next_sd_lXyRgsA130Jn3aoY
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_lXyRgsA130Jn3aoY');
+    }
+  }
+
+  sd_kmJ6eAkC89PMiJgV(bh) {
+    try {
+      const page = this.page;
+      bh.url = page.ssdURL + 'delete';
+
+      bh.body = {
+        email: page.user.email,
+        collection: 'users',
+      };
+
+      sessionStorage.clear();
+      bh = this.sd_xYBdmlJOZgZmyvwK(bh);
+      //appendnew_next_sd_kmJ6eAkC89PMiJgV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_kmJ6eAkC89PMiJgV');
+    }
+  }
+
+  async sd_xYBdmlJOZgZmyvwK(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'delete',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: bh.body,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_ULtCQj0a7XSiLrUU(bh);
+      //appendnew_next_sd_xYBdmlJOZgZmyvwK
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_xYBdmlJOZgZmyvwK');
+    }
+  }
+
+  async sd_ULtCQj0a7XSiLrUU(bh) {
     try {
       const { paramObj: qprm, path: path } =
         this.sdService.getPathAndQParamsObj('/home/landing');
@@ -113,10 +253,28 @@ export class regulationComponent {
         .navigate([this.sdService.formatPathWithParams(path, undefined)], {
           queryParams: Object.assign(qprm, ''),
         });
-      //appendnew_next_sd_RRaQEP3tCMNSlNQZ
+      bh = this.sd_aTiBR7WSVw0JfRD9(bh);
+      //appendnew_next_sd_ULtCQj0a7XSiLrUU
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_RRaQEP3tCMNSlNQZ');
+      return this.errorHandler(bh, e, 'sd_ULtCQj0a7XSiLrUU');
+    }
+  }
+
+  sd_aTiBR7WSVw0JfRD9(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Registration cancelled', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_aTiBR7WSVw0JfRD9
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_aTiBR7WSVw0JfRD9');
     }
   }
 

@@ -143,8 +143,8 @@
         "flow_type": "sync",
         "functionName": "submit",
         "category": "General",
-        "x": 25,
-        "y": 560,
+        "x": 45,
+        "y": 540,
         "wires": [
             [
                 "sd_eWumEgN06CVxqsEc"
@@ -164,7 +164,7 @@
         "script": "bh.url = bh.ssdUrl + 'register' \npage.loader = true;\n",
         "functionName": "sd_tBTHLjmwz5Q0mftK",
         "category": "Function",
-        "x": 665,
+        "x": 645,
         "y": 580,
         "wires": [
             [
@@ -195,7 +195,7 @@
         ],
         "functionName": "sd_gQZAvvRMz5G5uysH",
         "category": "General",
-        "x": 565,
+        "x": 545,
         "y": 580,
         "wires": [
             [
@@ -215,6 +215,7 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -222,8 +223,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -239,13 +242,15 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_8hnxYK0buXPRZf6Z",
         "category": "HTTP",
-        "x": 785,
+        "x": 765,
         "y": 580,
         "wires": [
             [
@@ -488,7 +493,7 @@
         "script": "page.registerForm.reset()\npage.showSpinner = false;\nif (page.result.message) {\n    bh.isApprovingApplication = false;\n} else {\n    bh.isApprovingApplication = true;\n}",
         "functionName": "sd_qCRXFjBkKQWQ7H1W",
         "category": "Function",
-        "x": 885,
+        "x": 865,
         "y": 580,
         "wires": [
             [
@@ -763,7 +768,7 @@
         ],
         "functionName": "sd_dhR5DPOD5a9k57cQ",
         "category": "General",
-        "x": 485,
+        "x": 465,
         "y": 460,
         "wires": [
             [
@@ -818,7 +823,7 @@
         "paramMappingObj": {},
         "functionName": "uploadId",
         "category": "HTTP",
-        "x": 685,
+        "x": 665,
         "y": 460,
         "wires": [
             [
@@ -873,7 +878,7 @@
         "paramMappingObj": {},
         "functionName": "sd_EaxnrpzkzZGcYO9r",
         "category": "HTTP",
-        "x": 885,
+        "x": 865,
         "y": 460,
         "wires": [
             [
@@ -974,7 +979,7 @@
         "outputs": 2,
         "functionName": "sd_38jNYaSATmsjQxjd",
         "category": "Function",
-        "x": 985,
+        "x": 1005,
         "y": 580,
         "wires": [
             [
@@ -1019,7 +1024,7 @@
         "direction": "ltr",
         "functionName": "sd_BzPPiwY870EJu1Ld",
         "category": "General",
-        "x": 1085,
+        "x": 1065,
         "y": 660,
         "wires": [
             []
@@ -1039,7 +1044,7 @@
         "script": "bh.url = bh.ssdUrl + 'upload-file' \n// page.loader = true;\n",
         "functionName": "sd_rDjEZ0e2bK4GQJSH",
         "category": "Function",
-        "x": 585,
+        "x": 565,
         "y": 460,
         "wires": [
             [
@@ -1061,7 +1066,7 @@
         "script": "page.registerForm.get('idDocument').setValue(page.result.filename);",
         "functionName": "sd_9o6PHfoPvF89JZrg",
         "category": "Function",
-        "x": 785,
+        "x": 765,
         "y": 460,
         "wires": [
             [
@@ -1083,7 +1088,7 @@
         "script": "page.registerForm.get('paySlipDocument').setValue(page.result.filename);",
         "functionName": "sd_5VSVE2W4jXtFApjh",
         "category": "Function",
-        "x": 965,
+        "x": 945,
         "y": 460,
         "wires": [
             [

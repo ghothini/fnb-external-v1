@@ -142,13 +142,13 @@
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
-              <p class="margin-bottom-7">Please upload ID Document</p><label class="custom-file-upload color-orange">
+              <p class="margin-bottom-7">Please upload ID Document</p><label class="custom-file-upload black">
                 <input id="uploadedFile1" (change)="fileUpload($event, &quot;ID&quot;)" type="file" required>Upload here<br><br>
                 {{page.registerForm.value.idFileName}}
               </label>
             </div>
             <div>
-              <p class="margin-bottom-7 margin-top-0">Please upload Pay slip</p><label class="custom-file-upload color-orange">
+              <p class="margin-bottom-7 margin-top-0">Please upload Pay slip</p><label class="custom-file-upload black">
                 <input id="uploadedFile2" (change)="fileUpload($event, &quot;POP&quot;)" type="file" required>Upload here<br><br>
                 {{page.registerForm.value.paySlipFileName}}
               </label>

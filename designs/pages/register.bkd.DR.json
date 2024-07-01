@@ -9421,7 +9421,7 @@
                                     },
                                     {
                                         "_key": "class",
-                                        "_value": "",
+                                        "_value": [],
                                         "_type": "dav",
                                         "_attrDef": "p"
                                     },
@@ -10187,7 +10187,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<label class=\"custom-file-upload color-orange\">\r\n  <input  id=\"uploadedFile1\"  (change)='fileUpload($event, \"ID\")' type=\"file\" required >Upload here<br><br>\r\n  {{page.registerForm.value.idFileName}}\r\n</label>",
+                                            "_value": "<label class=\"custom-file-upload black\">\r\n  <input  id=\"uploadedFile1\"  (change)='fileUpload($event, \"ID\")' type=\"file\" required >Upload here<br><br>\r\n  {{page.registerForm.value.idFileName}}\r\n</label>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
@@ -10427,7 +10427,7 @@
                                         },
                                         {
                                             "_key": "html",
-                                            "_value": "<label class=\"custom-file-upload color-orange\">\r\n    <input  id=\"uploadedFile2\" (change)='fileUpload($event, \"POP\")' type=\"file\" required >Upload here<br><br>\r\n    {{page.registerForm.value.paySlipFileName}}\r\n</label>",
+                                            "_value": "<label class=\"custom-file-upload black\">\r\n    <input  id=\"uploadedFile2\" (change)='fileUpload($event, \"POP\")' type=\"file\" required >Upload here<br><br>\r\n    {{page.registerForm.value.paySlipFileName}}\r\n</label>",
                                             "_type": "a",
                                             "_attrDef": "p"
                                         }
