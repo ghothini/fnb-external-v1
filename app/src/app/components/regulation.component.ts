@@ -171,10 +171,25 @@ export class regulationComponent {
           horizontalPosition: 'center',
           verticalPosition: 'bottom',
         });
+      bh = this.sd_RRaQEP3tCMNSlNQZ(bh);
       //appendnew_next_sd_g9qp3nwYlXcyMm4S
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_g9qp3nwYlXcyMm4S');
+    }
+  }
+
+  async sd_RRaQEP3tCMNSlNQZ(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/home/landing');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      //appendnew_next_sd_RRaQEP3tCMNSlNQZ
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_RRaQEP3tCMNSlNQZ');
     }
   }
 

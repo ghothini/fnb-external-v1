@@ -60,7 +60,7 @@
           <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Email address</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="{{page.results.email}}" [required]="true" formControlName="email" [disabled]="true">
+              <input matInput placeholder="{{page.results.email}}" [required]="true" formControlName="email" readonly="true" [disabled]="true">
               <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
             </mat-form-field>
           </div>

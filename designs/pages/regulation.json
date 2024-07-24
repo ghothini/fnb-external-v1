@@ -161,7 +161,9 @@
         "x": 385,
         "y": 140,
         "wires": [
-            []
+            [
+                "sd_RRaQEP3tCMNSlNQZ"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -176,13 +178,6 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/landing",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
         "functionName": "sd_RRaQEP3tCMNSlNQZ",
         "category": "Navigation",
         "x": 485,
@@ -191,8 +186,9 @@
             []
         ],
         "__n_excludedFromValidation__": {},
-        "generateNext": true,
-        "serviceName": "regulationComponent"
+        "generateNext": false,
+        "serviceName": "regulationComponent",
+        "generated": true
     },
     {
         "id": "sd_bUOnXMDTHtOaWVh2",

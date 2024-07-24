@@ -93,6 +93,21 @@ export class verificationComponent {
       return this.errorHandler(bh, e, 'sd_pn9NVGiN50g7TP8l');
     }
   }
+
+  allowNumbers(event = 'KeyboardEvent', ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_ZLTRiRfktG6Nyikz(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_AUJBNjqB9XpRSI1a');
+    }
+  }
   //appendnew_flow_verificationComponent_start
 
   sd_K00ER28O6vJJsUMB(bh) {
@@ -303,7 +318,9 @@ export class verificationComponent {
         this.sdService.getPathAndQParamsObj('/register');
       this.page.verificationForm.value = await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_Zj9irMRjFofwgYJ3
       return bh;
     } catch (e) {
@@ -623,6 +640,34 @@ export class verificationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_l0LWkvq7TBNpWWz6');
+    }
+  }
+
+  sd_ZLTRiRfktG6Nyikz(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_ZLTRiRfktG6Nyikz
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_ZLTRiRfktG6Nyikz');
     }
   }
 

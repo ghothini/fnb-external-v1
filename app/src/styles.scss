@@ -191,20 +191,42 @@ margin-bottom: 5px;
     font-size: 2em;
 }
 
-.orange-btn{
-    border-radius: 15px !important;
-    background-color:$grey !important;
-    color: white;
-    width: 120px;
-    height: 30px;
+// .orange-btn {
+//     border-radius: 15px !important;
+//     background-color:$orange !important;
+//     color: white;
+//     width: 120px;
+//     height: 30px;
+// }
+
+// .grey-btn {
+//     background-color: $grey !important;
+//     border-radius: 15px !important;
+//     color: white !important;
+//     width: 120px !important;
+//     height: 30px !important;
+// }
+
+.orange-btn, .grey-btn {
+  border-radius: 15px !important;
+  width: 140px !important;
+  height: 30px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 14px !important;
+  padding: 20px !important;
+  box-sizing: border-box !important;
+  color: white !important;
+  text-transform: none !important;
 }
 
-.grey-btn{
-    background-color: $grey;
-    border-radius: 15px !important;
-    color: white;
-    width: 120px;
-    height: 30px;
+.orange-btn {
+  background-color: $orange !important;
+}
+
+.grey-btn {
+  background-color: $grey !important;
 }
 
 .card-container{
@@ -317,7 +339,7 @@ margin-bottom: 5px;
 .black-btn{
     border-radius: 20px !important;
     background-color:black;
-    color: white;
+    color: white !important;
     width: 150px;
     height: 40px;
     border: none;
