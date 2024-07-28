@@ -166,7 +166,8 @@
         "y": 400,
         "wires": [
             [
-                "sd_D1onDjTy0vXPQwqZ"
+                "sd_D1onDjTy0vXPQwqZ",
+                "sd_mTBBNASY8Q00GXW3"
             ]
         ],
         "__n_excludedFromValidation__": {},

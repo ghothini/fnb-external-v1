@@ -2,7 +2,7 @@ export const environment = {
     "name": "prod",
     "properties": {
         "production": true,
-        "ssdURL": "http://localhost:8081/api/",
+        "ssdURL": "http:/l/ocalhost:8081/api/",
         "tenantName": "neutrinos-delivery",
         "appName": "fnb-external",
         "namespace": "com.neutrinos-delivery.fnb-external",
