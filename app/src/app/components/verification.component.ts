@@ -15,6 +15,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Common } from 'app/sd-services/Common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -287,7 +288,7 @@ export class verificationComponent {
           undefined
         )
       ) {
-        bh = this.sd_XlEqKw1G5Nm5LWTd(bh);
+        bh = this.sd_tPLrFETA2cPx8zn3(bh);
       } else {
         bh = await this.sd_tbYpneKzV7YDbt5E(bh);
       }
@@ -298,29 +299,41 @@ export class verificationComponent {
     }
   }
 
-  sd_XlEqKw1G5Nm5LWTd(bh) {
+  async sd_tPLrFETA2cPx8zn3(bh) {
     try {
-      sessionStorage.setItem(
-        'User',
-        JSON.stringify(this.page.verificationForm.value)
+      const CommonInstance: Common = this.__page_injector__.get(Common);
+
+      let outputVariables = await CommonInstance.setVariable(
+        this.page.verificationForm.value
       );
+      bh.result = outputVariables.input.data;
+
+      this.sd_yqhzAgbHDcrTlgDE(bh);
       bh = this.sd_Zj9irMRjFofwgYJ3(bh);
-      //appendnew_next_sd_XlEqKw1G5Nm5LWTd
+      //appendnew_next_sd_tPLrFETA2cPx8zn3
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_XlEqKw1G5Nm5LWTd');
+      return this.errorHandler(bh, e, 'sd_tPLrFETA2cPx8zn3');
+    }
+  }
+
+  sd_yqhzAgbHDcrTlgDE(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.result);
+      //appendnew_next_sd_yqhzAgbHDcrTlgDE
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yqhzAgbHDcrTlgDE');
     }
   }
 
   async sd_Zj9irMRjFofwgYJ3(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/register');
+        this.sdService.getPathAndQParamsObj('/regulations');
       this.page.verificationForm.value = await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       //appendnew_next_sd_Zj9irMRjFofwgYJ3
       return bh;
     } catch (e) {

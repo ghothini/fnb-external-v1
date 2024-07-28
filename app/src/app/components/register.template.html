@@ -60,7 +60,7 @@
           <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Email address</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="{{page.results.email}}" [required]="true" formControlName="email" readonly="true" [disabled]="true">
+              <input matInput placeholder="{{page.email}}" [required]="true" formControlName="email" readonly="true" [disabled]="true">
               <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
             </mat-form-field>
           </div>
@@ -77,7 +77,7 @@
           <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
               Number of dependants</label>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput type="number" [required]="false" formControlName="depedents" (input)="validateNoDependents()">
+              <input matInput type="number" [required]="false" formControlName="depedents" (input)="validateNoDependents()" (keydown)="allowNumbers($event)">
 
             </mat-form-field>
           </div>
@@ -101,15 +101,9 @@
           </div>
           <div fxLayout="column wrap" fxLayoutAlign="start stretch" [fxShow]="true">
             <div style="margin-bottom:7px;">
-              Country of birth</div><mat-autocomplete #auto="matAutocomplete">
-              <mat-optgroup *ngFor="let group of page.filteredOptions " [label]="group.letter">
-                <mat-option *ngFor="let option of group.names; let p = index;" [value]="option">
-                  {{option}}
-                </mat-option>
-              </mat-optgroup>
-            </mat-autocomplete>
+              Country of birth</div>
             <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
-              <input matInput placeholder="South Africa" [required]="false" [matAutocomplete]="auto" (input)="filterData($event)" formControlName="country" [disabled]="true">
+              <input matInput placeholder="South Africa" [required]="false" [matAutocomplete]="auto" (input)="filterData($event)" formControlName="country" readonly="True" [disabled]="true">
 
             </mat-form-field>
           </div>

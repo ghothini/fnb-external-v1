@@ -256,7 +256,7 @@
         "y": 400,
         "wires": [
             [
-                "sd_XlEqKw1G5Nm5LWTd"
+                "sd_tPLrFETA2cPx8zn3"
             ],
             [
                 "sd_tbYpneKzV7YDbt5E"
@@ -274,21 +274,15 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
+        "path": "/regulations",
         "resultMapping": {
             "type": "this.page",
             "value": "verificationForm.value"
         },
         "functionName": "sd_Zj9irMRjFofwgYJ3",
         "category": "Navigation",
-        "x": 905,
-        "y": 320,
+        "x": 865,
+        "y": 360,
         "wires": [
             []
         ],
@@ -830,39 +824,6 @@
         "generated": true
     },
     {
-        "id": "sd_XlEqKw1G5Nm5LWTd",
-        "type": "Storage",
-        "z": "sd_77k2dJPQTXfSLBMc",
-        "viewType": "client-pages",
-        "nodeType": "flow",
-        "name": "",
-        "operationType": "setItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "User"
-        },
-        "value": {
-            "type": "this.page",
-            "value": "verificationForm.value"
-        },
-        "resultMapping": {},
-        "functionName": "sd_XlEqKw1G5Nm5LWTd",
-        "category": "Storage",
-        "x": 805,
-        "y": 340,
-        "wires": [
-            [
-                "sd_Zj9irMRjFofwgYJ3"
-            ]
-        ],
-        "__n_excludedFromValidation__": {},
-        "generateNext": false,
-        "serviceName": "verificationComponent",
-        "generated": true
-    },
-    {
         "id": "sd_AUJBNjqB9XpRSI1a",
         "type": "PageStart",
         "z": "sd_77k2dJPQTXfSLBMc",
@@ -910,6 +871,96 @@
         "wires": [
             []
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tPLrFETA2cPx8zn3",
+        "type": "PageCallService",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_JvSdJbOo4jcXn94e",
+            "type": "tab",
+            "createdDate": "2024-05-17T07:22:07.165Z",
+            "label": "Common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_r23HTguCAPYbDfnt",
+            "flowName": "setVariable"
+        },
+        "inputVariables": [
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "verificationForm.value"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Common",
+        "startName": "setVariable",
+        "inputParams": [
+            "this.page.verificationForm.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_tPLrFETA2cPx8zn3",
+        "category": "General",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            [
+                "sd_yqhzAgbHDcrTlgDE",
+                "sd_Zj9irMRjFofwgYJ3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yqhzAgbHDcrTlgDE",
+        "type": "Log",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.result",
+        "functionName": "sd_yqhzAgbHDcrTlgDE",
+        "category": "General",
+        "x": 900,
+        "y": 280,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh",
+                "value": "result",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "verificationComponent",

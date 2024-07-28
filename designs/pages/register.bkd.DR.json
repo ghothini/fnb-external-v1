@@ -287,142 +287,6 @@
                 ]
             }
         },
-        "027e8bbd-3262-5db1-94a9-995e14c54a6f": {
-            "paletteKey": "FlexLayoutCol",
-            "parentEditorKey": "60d63bfd-df7a-3b30-edb9-797d10680214",
-            "isCommented": "true",
-            "commentid": "1717767775668",
-            "designerReference": [
-                {
-                    "_key": "componentLabel",
-                    "_value": "Loader",
-                    "_type": "kv",
-                    "_attrDef": "p",
-                    "_useAsLabel": true
-                },
-                {
-                    "_key": "style",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "class",
-                    "_value": [
-                        "loading"
-                    ],
-                    "_type": "dav",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "fxFlex",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "fxLayoutGap",
-                    "_value": "",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "wrap",
-                    "_value": "wrap",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "layoutAlign",
-                    "_value": "center",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "pLayoutAlign",
-                    "_value": "center",
-                    "_type": "a",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "[fxShow]",
-                    "_value": "true",
-                    "_type": "kv",
-                    "_attrDef": "p"
-                },
-                {
-                    "_key": "*ngIf",
-                    "_value": "page.loader",
-                    "_type": "kv",
-                    "_attrDef": "c"
-                }
-            ],
-            "a5fac1b7-d7e3-00b9-d73e-c61a35b215ee": {
-                "paletteKey": "FlexLayoutRow",
-                "parentEditorKey": "027e8bbd-3262-5db1-94a9-995e14c54a6f",
-                "isCommented": "true",
-                "commentid": "1717767775668",
-                "designerReference": [
-                    {
-                        "_key": "componentLabel",
-                        "_value": "Row",
-                        "_type": "kv",
-                        "_attrDef": "p",
-                        "_useAsLabel": true
-                    },
-                    {
-                        "_key": "style",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "class",
-                        "_value": [
-                            "loader"
-                        ],
-                        "_type": "dav",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxFlex",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "fxLayoutGap",
-                        "_value": "",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "wrap",
-                        "_value": "wrap",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "layoutAlign",
-                        "_value": "start",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "pLayoutAlign",
-                        "_value": "stretch",
-                        "_type": "a",
-                        "_attrDef": "p"
-                    },
-                    {
-                        "_key": "[fxShow]",
-                        "_value": "true",
-                        "_type": "kv",
-                        "_attrDef": "p"
-                    }
-                ]
-            }
-        },
         "4c15a7f8-13b1-0cc9-5c0c-33c5bb59a014": {
             "paletteKey": "FlexLayoutCol",
             "parentEditorKey": "60d63bfd-df7a-3b30-edb9-797d10680214",
@@ -4951,7 +4815,7 @@
                                     },
                                     {
                                         "_key": "placeholder",
-                                        "_value": "{{page.results.email}}",
+                                        "_value": "{{page.email}}",
                                         "_type": "kv",
                                         "_attrDef": "p",
                                         "_useAsLabel": true
@@ -6110,6 +5974,22 @@
                                             "activeTree": "pages",
                                             "z": "sd_tICxe7qPhqRvK1jx",
                                             "input": []
+                                        }
+                                    },
+                                    {
+                                        "_key": "(keydown)",
+                                        "_value": "allowNumbers($event)",
+                                        "_type": "kv",
+                                        "_attrDef": "c",
+                                        "_customAttributeFlag": "flowpicker",
+                                        "objValue": {
+                                            "nodeID": "sd_tegRQ212ZNRlOle7",
+                                            "functionName": "allowNumbers",
+                                            "activeTree": "pages",
+                                            "z": "sd_tICxe7qPhqRvK1jx",
+                                            "input": [
+                                                "$event"
+                                            ]
                                         }
                                     }
                                 ]
@@ -7494,7 +7374,8 @@
                                 "paletteKey": "ng-autocomplete",
                                 "parentEditorKey": "6ee05f7b-8298-e3d7-1455-dc0c3f9191b0",
                                 "isAdvancedComponent": true,
-                                "commentid": null,
+                                "isCommented": "true",
+                                "commentid": "1722048847807",
                                 "designerReference": [
                                     {
                                         "_key": "componentLabel",
@@ -7691,7 +7572,7 @@
                                     },
                                     {
                                         "_key": "readonly",
-                                        "_value": "",
+                                        "_value": "True",
                                         "_type": "kv",
                                         "_attrDef": "p"
                                     },

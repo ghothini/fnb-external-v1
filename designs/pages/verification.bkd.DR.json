@@ -3599,7 +3599,7 @@
                             },
                             {
                                 "_key": "(click)",
-                                "_value": "verification(); enter()",
+                                "_value": "verification(verificationForm); enter()",
                                 "_type": "kv",
                                 "_attrDef": "p",
                                 "objValue": {

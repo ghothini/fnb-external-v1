@@ -9,6 +9,7 @@ import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
+import { Common } from 'app/sd-services/Common'; //_splitter_
 //append_imports_end
 
 @Component({
@@ -49,7 +50,7 @@ export class regulationComponent {
 
   sd_nHD1aAS1VlNkamo4(bh) {
     try {
-      bh = this.sd_xROL0Y2fL8shU23C(bh);
+      bh = this.sd_oTdZ5kAT09SXH4V7(bh);
       //appendnew_next_sd_nHD1aAS1VlNkamo4
       return bh;
     } catch (e) {
@@ -81,12 +82,28 @@ export class regulationComponent {
       bh.input = {};
       bh.local = {};
       bh = this.sd_lXyRgsA130Jn3aoY(bh);
+      bh = this.sd_U0Gk1hYeS4PzM6eh(bh);
       //appendnew_next_disagree
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_bUOnXMDTHtOaWVh2');
     }
   }
   //appendnew_flow_regulationComponent_start
+
+  async sd_oTdZ5kAT09SXH4V7(bh) {
+    try {
+      const CommonInstance: Common = this.__page_injector__.get(Common);
+
+      let outputVariables = await CommonInstance.getVariable();
+      bh.result = outputVariables.local.data;
+
+      bh = this.sd_xROL0Y2fL8shU23C(bh);
+      //appendnew_next_sd_oTdZ5kAT09SXH4V7
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_oTdZ5kAT09SXH4V7');
+    }
+  }
 
   sd_xROL0Y2fL8shU23C(bh) {
     try {
@@ -95,22 +112,12 @@ export class regulationComponent {
       this.page.Signature = undefined;
       this.page.data = undefined;
       this.page.checkForm = undefined;
-      bh = this.sd_c4fxdNmR9QDXBFiB(bh);
+      this.page.email = bh.result.email;
+      bh = this.sd_4ysxRLck0ldIbEvh(bh);
       //appendnew_next_sd_xROL0Y2fL8shU23C
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_xROL0Y2fL8shU23C');
-    }
-  }
-
-  sd_c4fxdNmR9QDXBFiB(bh) {
-    try {
-      this.page.user = JSON.parse(sessionStorage.getItem('User'));
-      bh = this.sd_4ysxRLck0ldIbEvh(bh);
-      //appendnew_next_sd_c4fxdNmR9QDXBFiB
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_c4fxdNmR9QDXBFiB');
     }
   }
 
@@ -120,11 +127,21 @@ export class regulationComponent {
       page.checkForm = {
         checkBox: '',
       };
-      console.log(page.checkForm);
+      this.sd_F6UKAVTh67Ara15T(bh);
       //appendnew_next_sd_4ysxRLck0ldIbEvh
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_4ysxRLck0ldIbEvh');
+    }
+  }
+
+  sd_F6UKAVTh67Ara15T(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.result);
+      //appendnew_next_sd_F6UKAVTh67Ara15T
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_F6UKAVTh67Ara15T');
     }
   }
 
@@ -153,7 +170,7 @@ export class regulationComponent {
     try {
       const page = this.page;
       console.log(bh.input.form);
-      bh = this.sd_g9qp3nwYlXcyMm4S(bh);
+      bh = this.sd_RRaQEP3tCMNSlNQZ(bh);
       //appendnew_next_sd_TTGTz5bhDRy0z9wV
       return bh;
     } catch (e) {
@@ -161,28 +178,10 @@ export class regulationComponent {
     }
   }
 
-  sd_g9qp3nwYlXcyMm4S(bh) {
-    try {
-      this.__page_injector__
-        .get(MatSnackBar)
-        .open('Registration succesful', 'OK', {
-          duration: 3000,
-          direction: 'ltr',
-          horizontalPosition: 'center',
-          verticalPosition: 'bottom',
-        });
-      bh = this.sd_RRaQEP3tCMNSlNQZ(bh);
-      //appendnew_next_sd_g9qp3nwYlXcyMm4S
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_g9qp3nwYlXcyMm4S');
-    }
-  }
-
   async sd_RRaQEP3tCMNSlNQZ(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/home/landing');
+        this.sdService.getPathAndQParamsObj('/register');
       await this.__page_injector__
         .get(Router)
         .navigate([this.sdService.formatPathWithParams(path, undefined)]);
@@ -224,10 +223,11 @@ export class regulationComponent {
   sd_kmJ6eAkC89PMiJgV(bh) {
     try {
       const page = this.page;
+      console.log('initial ==>', bh.result);
       bh.url = page.ssdURL + 'delete';
 
       bh.body = {
-        email: page.user.email,
+        email: page.email,
         collection: 'users',
       };
 
@@ -252,6 +252,7 @@ export class regulationComponent {
       };
       this.page.result = await this.sdService.nHttpRequest(requestOptions);
       bh = this.sd_ULtCQj0a7XSiLrUU(bh);
+      bh = this.sd_wfSh3qwCrvjMkFRg(bh);
       //appendnew_next_sd_xYBdmlJOZgZmyvwK
       return bh;
     } catch (e) {
@@ -265,10 +266,9 @@ export class regulationComponent {
         this.sdService.getPathAndQParamsObj('/home/landing');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
       bh = this.sd_aTiBR7WSVw0JfRD9(bh);
+      bh = this.sd_d29JjT3BHsdxwFSx(bh);
       //appendnew_next_sd_ULtCQj0a7XSiLrUU
       return bh;
     } catch (e) {
@@ -290,6 +290,44 @@ export class regulationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_aTiBR7WSVw0JfRD9');
+    }
+  }
+
+  sd_d29JjT3BHsdxwFSx(bh) {
+    try {
+      const page = this.page;
+      console.log('after navigate ==>', bh.result);
+      console.log('after navigate body ==>', bh.body);
+
+      //appendnew_next_sd_d29JjT3BHsdxwFSx
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_d29JjT3BHsdxwFSx');
+    }
+  }
+
+  sd_wfSh3qwCrvjMkFRg(bh) {
+    try {
+      const page = this.page;
+      console.log('after API call ==>', bh.result);
+      console.log('after API call body ==>', bh.body);
+
+      //appendnew_next_sd_wfSh3qwCrvjMkFRg
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_wfSh3qwCrvjMkFRg');
+    }
+  }
+
+  sd_U0Gk1hYeS4PzM6eh(bh) {
+    try {
+      const page = this.page;
+      console.log('after button click ==>', bh.result);
+
+      //appendnew_next_sd_U0Gk1hYeS4PzM6eh
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_U0Gk1hYeS4PzM6eh');
     }
   }
 

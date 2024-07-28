@@ -17,6 +17,8 @@ declare const cordova: any;
   providedIn: 'root',
 })
 export class Common {
+  public data: any;
+
   constructor(
     private sdService: SDBaseService,
     private router: Router,
@@ -54,6 +56,58 @@ export class Common {
       return await this.errorHandler(bh, e, 'sd_ICNt0OG5fw5WUhW5');
     }
   }
+
+  async setVariable(data: any = undefined, ...others) {
+    let bh: any = {
+      input: {
+        data,
+      },
+      local: {},
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_NjgqgwT0q4ApBjJZ(bh);
+      //appendnew_next_setVariable
+      return (
+        // formatting output variables
+        {
+          input: {
+            data: bh.input.data,
+          },
+          local: {},
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_r23HTguCAPYbDfnt');
+    }
+  }
+
+  async getVariable(...others) {
+    let bh: any = {
+      input: {},
+      local: {
+        data: undefined,
+      },
+    };
+    try {
+      bh = this.sdService.__constructDefault(bh);
+
+      bh = await this.sd_dmPATmPoFR3xocqB(bh);
+      //appendnew_next_getVariable
+      return (
+        // formatting output variables
+        {
+          input: {},
+          local: {
+            data: bh.local.data,
+          },
+        }
+      );
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_tDoX4wm57TuTdmoh');
+    }
+  }
   //appendnew_flow_Common_start
 
   async sd_DGw05dILlW4iCtsw(bh) {
@@ -74,6 +128,26 @@ export class Common {
       return bh;
     } catch (e) {
       return await this.errorHandler(bh, e, 'sd_JBQGNtMZWWxBCwsR');
+    }
+  }
+
+  async sd_NjgqgwT0q4ApBjJZ(bh) {
+    try {
+      this.data = bh.input.data;
+      //appendnew_next_sd_NjgqgwT0q4ApBjJZ
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_NjgqgwT0q4ApBjJZ');
+    }
+  }
+
+  async sd_dmPATmPoFR3xocqB(bh) {
+    try {
+      bh.local.data = this.data;
+      //appendnew_next_sd_dmPATmPoFR3xocqB
+      return bh;
+    } catch (e) {
+      return await this.errorHandler(bh, e, 'sd_dmPATmPoFR3xocqB');
     }
   }
 

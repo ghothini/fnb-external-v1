@@ -1313,6 +1313,7 @@
                 {
                     "_key": "class",
                     "_value": [
+                        "margin-bottom-1em",
                         "contant-contanier",
                         "full-width"
                     ],

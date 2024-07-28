@@ -99,6 +99,10 @@ margin-bottom: 5px;
         margin-bottom: 7px;
 }
 
+.margin-bottom-1em {
+    margin-bottom: 1em
+}
+
 //position
 .relative-p{
     position: relative;
@@ -643,4 +647,9 @@ input[type="file"] {
 
 .margin-top-0 {
     margin-top: 0;
+}
+
+.mat-checkbox-checked .mat-checkbox-background,
+.mat-checkbox-indeterminate .mat-checkbox-background {
+  background-color: $green-d !important;
 }
