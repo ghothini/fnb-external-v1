@@ -114,15 +114,22 @@
                     "type": "literal",
                     "value": "false"
                 }
+            },
+            {
+                "textIp": "email",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": "result.email"
+                }
             }
         ],
         "functionName": "sd_ZzOvZ6UEt9Cuxr6f",
         "category": "Function",
-        "x": 265,
+        "x": 325,
         "y": 40,
         "wires": [
             [
-                "sd_vORJrk0WeWisxEdm"
+                "sd_Iu8ygKxUV790J4YD"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -143,8 +150,8 @@
         "flow_type": "sync",
         "functionName": "submit",
         "category": "General",
-        "x": 25,
-        "y": 560,
+        "x": 45,
+        "y": 540,
         "wires": [
             [
                 "sd_eWumEgN06CVxqsEc"
@@ -164,7 +171,7 @@
         "script": "bh.url = bh.ssdUrl + 'register' \npage.loader = true;\n",
         "functionName": "sd_tBTHLjmwz5Q0mftK",
         "category": "Function",
-        "x": 665,
+        "x": 645,
         "y": 580,
         "wires": [
             [
@@ -195,7 +202,7 @@
         ],
         "functionName": "sd_gQZAvvRMz5G5uysH",
         "category": "General",
-        "x": 565,
+        "x": 545,
         "y": 580,
         "wires": [
             [
@@ -215,7 +222,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -223,10 +229,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -242,11 +246,9 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_8hnxYK0buXPRZf6Z",
         "category": "HTTP",
@@ -310,7 +312,7 @@
         "y": 40,
         "wires": [
             [
-                "sd_ZzOvZ6UEt9Cuxr6f"
+                "sd_yHRyLOrjvHvKSU4g"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -325,10 +327,10 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "page.stateGroups = [\n  { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },\n  { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },\n  { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },\n  { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },\n  { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },\n  { letter: 'F', names: ['Fiji', 'Finland', 'France'] },\n  { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },\n  { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },\n  { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },\n  { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },\n  { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },\n  { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },\n  { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },\n  { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },\n  { letter: 'O', names: ['Oman'] },\n  { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },\n  { letter: 'Q', names: ['Qatar'] },\n  { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },\n  { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },\n  { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },\n  { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },\n  { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },\n  { letter: 'Y', names: ['Yemen'] },\n  { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }\n]\n\n\n\n\n\n\n\npage.registerForm = new FormGroup({\n  _id: new FormControl(new Date().getTime()),\n  createDate: new FormControl(new Date()),\n  title: new FormControl('',Validators.required),\n  name: new FormControl('',Validators.required),\n  surname: new FormControl('',Validators.required),\n  race: new FormControl('',Validators.required),\n  email: new FormControl(page.results.email,[Validators.required,Validators.pattern(/^[^\\s@]+@([^\\s@.,]+\\.)+[^\\s@.,]{2,}$/)]),\n  income: new FormControl('',Validators.required),\n  depedents: new FormControl('',Validators.required),\n  marital: new FormControl('',Validators.required),\n  qualification: new FormControl('',Validators.required),\n  country: new FormControl( 'South Africa' ,Validators.required),\n  address: new FormControl('',Validators.required),\n  sourceOfIncome: new FormControl('',Validators.required),\n  additionalIncome: new FormControl(false),\n  tax: new FormControl(false),\n  idDocument: new FormControl(''),\n  idFileName: new FormControl(''),\n  paySlipDocument: new FormControl(''),\n  paySlipFileName: new FormControl(''),\n});\n\n\n\n",
+        "script": "// page.stateGroups = [\n//   { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },\n//   { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },\n//   { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },\n//   { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },\n//   { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },\n//   { letter: 'F', names: ['Fiji', 'Finland', 'France'] },\n//   { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },\n//   { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },\n//   { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },\n//   { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },\n//   { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },\n//   { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },\n//   { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },\n//   { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },\n//   { letter: 'O', names: ['Oman'] },\n//   { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },\n//   { letter: 'Q', names: ['Qatar'] },\n//   { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },\n//   { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },\n//   { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },\n//   { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },\n//   { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },\n//   { letter: 'Y', names: ['Yemen'] },\n//   { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }\n// ]\n\n\n\n\n\n\n\npage.registerForm = new FormGroup({\n  _id: new FormControl(new Date().getTime()),\n  createDate: new FormControl(new Date()),\n  title: new FormControl('',Validators.required),\n  name: new FormControl('',Validators.required),\n  surname: new FormControl('',Validators.required),\n  race: new FormControl('',Validators.required),\n  email: new FormControl(bh.result.email,[Validators.required,Validators.pattern(/^[^\\s@]+@([^\\s@.,]+\\.)+[^\\s@.,]{2,}$/)]),\n  income: new FormControl('',Validators.required),\n  depedents: new FormControl('',Validators.required),\n  marital: new FormControl('',Validators.required),\n  qualification: new FormControl('',Validators.required),\n  country: new FormControl( 'South Africa' ,Validators.required),\n  address: new FormControl('',Validators.required),\n  sourceOfIncome: new FormControl('',Validators.required),\n  additionalIncome: new FormControl(false),\n  tax: new FormControl(false),\n  idDocument: new FormControl(''),\n  idFileName: new FormControl(''),\n  paySlipDocument: new FormControl(''),\n  paySlipFileName: new FormControl(''),\n});\n\nconsole.log(\"this is from the get service ==>\", bh.result)\n\n\n\n",
         "functionName": "sd_Iu8ygKxUV790J4YD",
         "category": "Function",
-        "x": 465,
+        "x": 405,
         "y": 40,
         "wires": [
             []
@@ -493,7 +495,7 @@
         "script": "page.registerForm.reset()\npage.showSpinner = false;\nif (page.result.message) {\n    bh.isApprovingApplication = false;\n} else {\n    bh.isApprovingApplication = true;\n}",
         "functionName": "sd_qCRXFjBkKQWQ7H1W",
         "category": "Function",
-        "x": 885,
+        "x": 925,
         "y": 580,
         "wires": [
             [
@@ -512,20 +514,15 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/regulations",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/home/landing",
         "functionName": "sd_b0wDVtLpQBWtosez",
         "category": "Navigation",
         "x": 1065,
         "y": 500,
         "wires": [
-            []
+            [
+                "sd_GxLXK1FyBtZ8i93O"
+            ]
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
@@ -580,7 +577,7 @@
         "viewType": "common",
         "nodeType": "flow",
         "name": "",
-        "script": "const file: File | null = bh.input.event.target.files?.[0] || null\n// const fileElement = document.getElementById('uploadedFile1') as HTMLInputElement;\nconst filesTypeArr = ['pdf', 'docx', 'jpeg', 'jpg', 'webp', 'png'];\n//CURRENT\n\npage.isValidatedUpload = false;\n\nif (file) {\n  if (bh.input.docType === 'ID') {\n    page.registerForm.get('idFileName').setValue(file.name);\n    page.uploadedFile1 = new FormData()\n    page.uploadedFile1.append('file', file);\n    filesTypeArr.forEach((fileType) => {\n      if (fileType === file.name.split('.')[1]) {\n        page.idUploadResult = true;\n        page.isValidatedUpload = true;\n      }\n    })\n\n\n    //  page.result = {\n    //    file: page.uploadedFile1,\n    //    email: page.email\n    //  }\n    console.log(\"results\", page.idUploadResult)\n  }\n  if (bh.input.docType === 'POP') {\n    page.registerForm.get('paySlipFileName').setValue(file.name);\n    page.uploadedFile2 = new FormData()\n    page.uploadedFile2.append('file', file);\n    filesTypeArr.forEach((fileType) => {\n      if (fileType === file.name.split('.')[1]) {\n        page.popUploadResult = true;\n        page.isValidatedUpload = true;\n      }\n    })\n\n    console.log(\"page.uploadedFile2\", page.popUploadResult)\n  }\n  if (page.idUploadResult && page.popUploadResult) {\n    page.filesUploadResult = true;\n  }\n}\nelse {\n  console.log('No file is uploaded')\n  // Handle the case where no file is selected\n}",
+        "script": "const file: File | null = bh.input.event.target.files?.[0] || null\nconst filesTypeArr = ['pdf', 'docx', 'jpeg', 'jpg', 'webp', 'png'];\n//CURRENT\n\npage.isValidatedUpload = false;\n\nif (file) {\n  if (bh.input.docType === 'ID') {\n    page.registerForm.get('idFileName').setValue(file.name);\n    page.uploadedFile1 = new FormData()\n    page.uploadedFile1.append('file', file);\n    filesTypeArr.forEach((fileType) => {\n      if (fileType === file.name.split('.')[1]) {\n        page.idUploadResult = true;\n        page.isValidatedUpload = true;\n      }\n    })\n\n    console.log(\"results\", page.idUploadResult)\n  }\n  if (bh.input.docType === 'POP') {\n    page.registerForm.get('paySlipFileName').setValue(file.name);\n    page.uploadedFile2 = new FormData()\n    page.uploadedFile2.append('file', file);\n    filesTypeArr.forEach((fileType) => {\n      if (fileType === file.name.split('.')[1]) {\n        page.popUploadResult = true;\n        page.isValidatedUpload = true;\n      }\n    })\n\n    console.log(\"page.uploadedFile2\", page.popUploadResult)\n  }\n  if (page.idUploadResult && page.popUploadResult) {\n    page.filesUploadResult = true;\n  }\n}\nelse {\n  console.log('No file is uploaded')\n  // Handle the case where no file is selected\n}",
         "functionName": "sd_bvzUcoWDbm3cBKQm",
         "category": "Function",
         "x": 125,
@@ -615,9 +612,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -768,7 +763,7 @@
         ],
         "functionName": "sd_dhR5DPOD5a9k57cQ",
         "category": "General",
-        "x": 485,
+        "x": 445,
         "y": 460,
         "wires": [
             [
@@ -788,7 +783,6 @@
         "nodeType": "flow",
         "name": "Upload ID",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -796,10 +790,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -815,15 +807,13 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "uploadId",
         "category": "HTTP",
-        "x": 685,
+        "x": 625,
         "y": 460,
         "wires": [
             [
@@ -843,7 +833,6 @@
         "nodeType": "flow",
         "name": "",
         "method": "post",
-        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -851,10 +840,8 @@
             "mapVarValue": "url"
         },
         "ret": "json",
-        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
-        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -870,15 +857,13 @@
         },
         "headers": {},
         "headersObj": [],
-        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
-        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "sd_EaxnrpzkzZGcYO9r",
         "category": "HTTP",
-        "x": 885,
+        "x": 865,
         "y": 460,
         "wires": [
             [
@@ -979,7 +964,7 @@
         "outputs": 2,
         "functionName": "sd_38jNYaSATmsjQxjd",
         "category": "Function",
-        "x": 985,
+        "x": 1005,
         "y": 580,
         "wires": [
             [
@@ -1014,9 +999,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -1024,7 +1007,7 @@
         "direction": "ltr",
         "functionName": "sd_BzPPiwY870EJu1Ld",
         "category": "General",
-        "x": 1085,
+        "x": 1065,
         "y": 660,
         "wires": [
             []
@@ -1044,7 +1027,7 @@
         "script": "bh.url = bh.ssdUrl + 'upload-file' \n// page.loader = true;\n",
         "functionName": "sd_rDjEZ0e2bK4GQJSH",
         "category": "Function",
-        "x": 585,
+        "x": 525,
         "y": 460,
         "wires": [
             [
@@ -1066,7 +1049,7 @@
         "script": "page.registerForm.get('idDocument').setValue(page.result.filename);",
         "functionName": "sd_9o6PHfoPvF89JZrg",
         "category": "Function",
-        "x": 785,
+        "x": 765,
         "y": 460,
         "wires": [
             [
@@ -1088,7 +1071,7 @@
         "script": "page.registerForm.get('paySlipDocument').setValue(page.result.filename);",
         "functionName": "sd_5VSVE2W4jXtFApjh",
         "category": "Function",
-        "x": 965,
+        "x": 985,
         "y": 460,
         "wires": [
             [
@@ -1101,32 +1084,783 @@
         "generated": true
     },
     {
-        "id": "sd_vORJrk0WeWisxEdm",
-        "type": "Storage",
+        "id": "sd_yHRyLOrjvHvKSU4g",
+        "type": "PageCallService",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_JvSdJbOo4jcXn94e",
+            "type": "tab",
+            "createdDate": "2024-05-17T07:22:07.165Z",
+            "label": "Common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_tDoX4wm57TuTdmoh",
+            "flowName": "getVariable"
+        },
+        "inputVariables": [],
+        "outputMapping": [
+            {
+                "mapVarType": "local",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Common",
+        "startName": "getVariable",
+        "inputParams": [],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_yHRyLOrjvHvKSU4g",
+        "category": "General",
+        "x": 245,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ZzOvZ6UEt9Cuxr6f"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tegRQ212ZNRlOle7",
+        "type": "PageStart",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allowNumbers",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allowNumbers",
+        "category": "General",
+        "x": 45,
+        "y": 820,
+        "wires": [
+            [
+                "sd_rBHsHlT8DPkeqsDG"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_rBHsHlT8DPkeqsDG",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Control']; // Add any other allowed keys here\n    if (bh.allowedKeys.includes(bh.input.event.key) || (bh.input.event.ctrlKey && (bh.input.event.key === 'v' || bh.input.event.key === 'c'))) {\n      return; // Allow these keys\n    }\n\n   \n\n\n    if (!/^\\d$/.test(bh.input.event.key)) {\n      bh.input.event.preventDefault(); // Prevent non-numeric keys\n    }",
+        "functionName": "sd_rBHsHlT8DPkeqsDG",
+        "category": "Function",
+        "x": 130,
+        "y": 820,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iV6Rs5IXlikxJnaW",
+        "type": "PageStart",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "submitt",
+        "outputs": 1,
+        "inputVariables": [],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "submitt",
+        "category": "General",
+        "x": 45,
+        "y": 1020,
+        "wires": [
+            [
+                "sd_Cjq3ODHJmitcncT7"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "registerComponent"
+    },
+    {
+        "id": "sd_81Cz54GCRnrpnzoV",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.ssdUrl + 'register' \npage.loader = true;\n",
+        "functionName": "sd_81Cz54GCRnrpnzoV",
+        "category": "Function",
+        "x": 645,
+        "y": 1060,
+        "wires": [
+            [
+                "sd_sr1xLF1KddmdIbco"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_VSAavyFmoDI0YPMI",
+        "type": "Environment",
         "z": "sd_tICxe7qPhqRvK1jx",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "operationType": "getItem",
-        "storageType": "sessionStorage",
         "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "User"
-        },
-        "value": {},
-        "resultMapping": {
-            "type": "this.page",
-            "value": "results"
-        },
-        "functionName": "sd_vORJrk0WeWisxEdm",
-        "category": "Storage",
-        "x": 365,
-        "y": 40,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_VSAavyFmoDI0YPMI",
+        "category": "General",
+        "x": 545,
+        "y": 1060,
         "wires": [
             [
-                "sd_Iu8ygKxUV790J4YD"
+                "sd_81Cz54GCRnrpnzoV"
             ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_sr1xLF1KddmdIbco",
+        "type": "HttpRequest",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.registerForm.value",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "registerForm.value"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_sr1xLF1KddmdIbco",
+        "category": "HTTP",
+        "x": 765,
+        "y": 1060,
+        "wires": [
+            [
+                "sd_EBLlWBKY7EN3bdVC"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Cjq3ODHJmitcncT7",
+        "type": "PageSwitch",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "registerForm.invalid",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.registerForm.invalid",
+        "rules": [
+            {
+                "t": "else"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_Cjq3ODHJmitcncT7",
+        "category": "Function",
+        "x": 165,
+        "y": 1034,
+        "wires": [
+            [
+                "sd_nXKDYHXMXlo6RZUq"
+            ],
+            [
+                "sd_3dOXvh5qhRftl143"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3dOXvh5qhRftl143",
+        "type": "SnackBar",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Please fill all the fields"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_3dOXvh5qhRftl143",
+        "category": "General",
+        "x": 305,
+        "y": 1120,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_EBLlWBKY7EN3bdVC",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.registerForm.reset()\npage.showSpinner = false;\nif (page.result.message) {\n    bh.isApprovingApplication = false;\n} else {\n    bh.isApprovingApplication = true;\n}",
+        "functionName": "sd_EBLlWBKY7EN3bdVC",
+        "category": "Function",
+        "x": 865,
+        "y": 1060,
+        "wires": [
+            [
+                "sd_eSlhi8KiCRVnyaJ1"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_5hCoDPVoeiZ7rKz7",
+        "type": "Navigation",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/regulations",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
+        "functionName": "sd_5hCoDPVoeiZ7rKz7",
+        "category": "Navigation",
+        "x": 1065,
+        "y": 980,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_3p0IWT4kqgyllO5j",
+        "type": "SnackBar",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Please upload ID and Payslip"
+        },
+        "action": {
+            "type": "str",
+            "value": "OK"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_3p0IWT4kqgyllO5j",
+        "category": "General",
+        "x": 365,
+        "y": 1020,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nXKDYHXMXlo6RZUq",
+        "type": "PageSwitch",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "File upload switch1",
+        "property": "filesUploadResult",
+        "propertyType": "this.page",
+        "propertyGv": "this.page.filesUploadResult",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "fileUploadSwitch1",
+        "category": "Function",
+        "x": 265,
+        "y": 940,
+        "wires": [
+            [
+                "sd_iXeJm2qvF0nsYQNs"
+            ],
+            [
+                "sd_3p0IWT4kqgyllO5j"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_EVo0ftoTQPK5tg63",
+        "type": "Environment",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "envMaps": [
+            {
+                "flowVar": {
+                    "type": "bh",
+                    "value": "ssdUrl"
+                },
+                "envProperty": "ssdURL"
+            }
+        ],
+        "functionName": "sd_EVo0ftoTQPK5tg63",
+        "category": "General",
+        "x": 445,
+        "y": 940,
+        "wires": [
+            [
+                "sd_zZgpF53rVBthEoVL"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_nH6GFVU06WYEh2Vp",
+        "type": "HttpRequest",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "Upload ID1",
+        "method": "post",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.uploadedFile1",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "uploadedFile1"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMappingObj": {},
+        "functionName": "uploadId1",
+        "category": "HTTP",
+        "x": 685,
+        "y": 940,
+        "wires": [
+            [
+                "sd_pWt9Xg6SEhgM8yad"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_liLNNISAMqEKNmSF",
+        "type": "HttpRequest",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "method": "post",
+        "methodMapping": "",
+        "methodMappingObj": {},
+        "urlMapping": "bh.url",
+        "urlMappingObj": {
+            "mapVarType": "bh",
+            "mapVarValue": "url"
+        },
+        "ret": "json",
+        "retMapping": "",
+        "retMappingObj": {},
+        "observe": "",
+        "observeMapping": "",
+        "observeMappingObj": {},
+        "reportProgress": false,
+        "withCreds": false,
+        "reqBody": "this.page.uploadedFile2",
+        "reqBodyObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "uploadedFile2"
+        },
+        "resultMapping": "this.page.result",
+        "resultMappingObj": {
+            "mapVarType": "this.page",
+            "mapVarValue": "result"
+        },
+        "headers": {},
+        "headersObj": [],
+        "headerMapping": "",
+        "headerMappingObj": {},
+        "params": {},
+        "paramsObj": [],
+        "paramMapping": "",
+        "paramMappingObj": {},
+        "functionName": "sd_liLNNISAMqEKNmSF",
+        "category": "HTTP",
+        "x": 865,
+        "y": 940,
+        "wires": [
+            [
+                "sd_hVK942Kbq0bNivBW"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_iXeJm2qvF0nsYQNs",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.showSpinner = true;",
+        "functionName": "sd_iXeJm2qvF0nsYQNs",
+        "category": "Function",
+        "x": 360,
+        "y": 940,
+        "wires": [
+            [
+                "sd_EVo0ftoTQPK5tg63"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_eSlhi8KiCRVnyaJ1",
+        "type": "PageSwitch",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "property": "isApprovingApplication",
+        "propertyType": "bh",
+        "propertyGv": "bh.isApprovingApplication",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "functionName": "sd_eSlhi8KiCRVnyaJ1",
+        "category": "Function",
+        "x": 1005,
+        "y": 1060,
+        "wires": [
+            [
+                "sd_5hCoDPVoeiZ7rKz7"
+            ],
+            [
+                "sd_Isl40qS3R6uUAwpy"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_Isl40qS3R6uUAwpy",
+        "type": "SnackBar",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "User account application already exists!"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "horizontalPositionMap": "",
+        "verticalPosition": "bottom",
+        "verticalPositionMap": "",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_Isl40qS3R6uUAwpy",
+        "category": "General",
+        "x": 1065,
+        "y": 1140,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_zZgpF53rVBthEoVL",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.url = bh.ssdUrl + 'upload-file' \n// page.loader = true;\n",
+        "functionName": "sd_zZgpF53rVBthEoVL",
+        "category": "Function",
+        "x": 525,
+        "y": 940,
+        "wires": [
+            [
+                "sd_nH6GFVU06WYEh2Vp"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_pWt9Xg6SEhgM8yad",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.registerForm.get('idDocument').setValue(page.result.filename);",
+        "functionName": "sd_pWt9Xg6SEhgM8yad",
+        "category": "Function",
+        "x": 765,
+        "y": 940,
+        "wires": [
+            [
+                "sd_liLNNISAMqEKNmSF"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_hVK942Kbq0bNivBW",
+        "type": "Script",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.registerForm.get('paySlipDocument').setValue(page.result.filename);",
+        "functionName": "sd_hVK942Kbq0bNivBW",
+        "category": "Function",
+        "x": 945,
+        "y": 940,
+        "wires": [
+            [
+                "sd_VSAavyFmoDI0YPMI"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "registerComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_GxLXK1FyBtZ8i93O",
+        "type": "SnackBar",
+        "z": "sd_tICxe7qPhqRvK1jx",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "message": {
+            "type": "str",
+            "value": "Registration successful"
+        },
+        "action": {
+            "type": "str",
+            "value": "Ok"
+        },
+        "duration": {
+            "type": "num",
+            "value": "3000"
+        },
+        "horizontalPosition": "center",
+        "verticalPosition": "bottom",
+        "panelClass": {
+            "type": "str",
+            "value": ""
+        },
+        "direction": "ltr",
+        "functionName": "sd_GxLXK1FyBtZ8i93O",
+        "category": "General",
+        "x": 1145,
+        "y": 500,
+        "wires": [
+            []
         ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,

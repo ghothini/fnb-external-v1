@@ -140,8 +140,8 @@
         ],
         "functionName": "sd_zUiYQYNk75jvOV56",
         "category": "General",
-        "x": 365,
-        "y": 380,
+        "x": 345,
+        "y": 400,
         "wires": [
             [
                 "sd_4BPBswPMMDEJOWBi"
@@ -162,8 +162,8 @@
         "script": "bh.url = bh.ssdUrl + 'verification' \npage.showSpinner = true;",
         "functionName": "sd_4BPBswPMMDEJOWBi",
         "category": "Function",
-        "x": 465,
-        "y": 380,
+        "x": 445,
+        "y": 400,
         "wires": [
             [
                 "sd_D1onDjTy0vXPQwqZ"
@@ -182,6 +182,7 @@
         "nodeType": "flow",
         "name": "verify",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -189,8 +190,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -206,14 +209,16 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "verify",
         "category": "HTTP",
-        "x": 545,
-        "y": 380,
+        "x": 525,
+        "y": 400,
         "wires": [
             [
                 "sd_5LOcpmg28zZ5lQnz"
@@ -247,11 +252,11 @@
         "outputs": 2,
         "functionName": "sd_3EFJNXA4KS1Itfik",
         "category": "Function",
-        "x": 705,
-        "y": 380,
+        "x": 685,
+        "y": 400,
         "wires": [
             [
-                "sd_XlEqKw1G5Nm5LWTd"
+                "sd_tPLrFETA2cPx8zn3"
             ],
             [
                 "sd_tbYpneKzV7YDbt5E"
@@ -269,18 +274,15 @@
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "path": "/register",
-        "pathMap": "",
-        "pathparams": "",
-        "pathparamsMap": "",
-        "qparams": "",
-        "qparamsMap": "",
-        "qparamsArray": "",
-        "resultMapping": "",
+        "path": "/regulations",
+        "resultMapping": {
+            "type": "this.page",
+            "value": "verificationForm.value"
+        },
         "functionName": "sd_Zj9irMRjFofwgYJ3",
         "category": "Navigation",
-        "x": 905,
-        "y": 320,
+        "x": 865,
+        "y": 360,
         "wires": [
             []
         ],
@@ -312,8 +314,8 @@
         "outputs": 2,
         "functionName": "sd_vYxVeJqQDCgfF20a",
         "category": "Function",
-        "x": 265,
-        "y": 400,
+        "x": 245,
+        "y": 420,
         "wires": [
             [
                 "sd_zUiYQYNk75jvOV56"
@@ -357,8 +359,8 @@
         "direction": "ltr",
         "functionName": "sd_vF3oHlpAdQkzoAEn",
         "category": "General",
-        "x": 385,
-        "y": 480,
+        "x": 365,
+        "y": 500,
         "wires": [
             []
         ],
@@ -769,8 +771,8 @@
         "script": "if(page.result.message){\n    bh.isAddingAccount = true;\n} else {\n    bh.isAddingAccount = false;\n}\npage.showSpinner = false;",
         "functionName": "sd_5LOcpmg28zZ5lQnz",
         "category": "Function",
-        "x": 625,
-        "y": 380,
+        "x": 605,
+        "y": 400,
         "wires": [
             [
                 "sd_3EFJNXA4KS1Itfik"
@@ -811,8 +813,8 @@
         "direction": "ltr",
         "functionName": "sd_tbYpneKzV7YDbt5E",
         "category": "General",
-        "x": 805,
-        "y": 440,
+        "x": 785,
+        "y": 460,
         "wires": [
             []
         ],
@@ -822,33 +824,143 @@
         "generated": true
     },
     {
-        "id": "sd_XlEqKw1G5Nm5LWTd",
-        "type": "Storage",
+        "id": "sd_AUJBNjqB9XpRSI1a",
+        "type": "PageStart",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "allowNumbers",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "str",
+                    "value": "KeyboardEvent"
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "allowNumbers",
+        "category": "General",
+        "x": 65,
+        "y": 620,
+        "wires": [
+            [
+                "sd_ZLTRiRfktG6Nyikz"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "verificationComponent"
+    },
+    {
+        "id": "sd_ZLTRiRfktG6Nyikz",
+        "type": "Script",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "bh.allowedKeys = ['Backspace', 'ArrowLeft', 'ArrowRight', 'Delete', 'Control']; // Add any other allowed keys here\n    if (bh.allowedKeys.includes(bh.input.event.key) || (bh.input.event.ctrlKey && (bh.input.event.key === 'v' || bh.input.event.key === 'c'))) {\n      return; // Allow these keys\n    }\n\n    if (!/^\\d$/.test(bh.input.event.key)) {\n      bh.input.event.preventDefault(); // Prevent non-numeric keys\n    }",
+        "functionName": "sd_ZLTRiRfktG6Nyikz",
+        "category": "Function",
+        "x": 185,
+        "y": 620,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_tPLrFETA2cPx8zn3",
+        "type": "PageCallService",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 1,
+        "isValidNode": true,
+        "noerr": 0,
+        "service": {
+            "id": "sd_JvSdJbOo4jcXn94e",
+            "type": "tab",
+            "createdDate": "2024-05-17T07:22:07.165Z",
+            "label": "Common",
+            "disabled": false,
+            "info": "",
+            "functionSeq": 0,
+            "tabType": "client"
+        },
+        "flow": {
+            "flowId": "sd_r23HTguCAPYbDfnt",
+            "flowName": "setVariable"
+        },
+        "inputVariables": [
+            {
+                "key": "data",
+                "map": true,
+                "valueType": "this.page",
+                "value": "verificationForm.value"
+            }
+        ],
+        "outputMapping": [
+            {
+                "mapVarType": "input",
+                "key": "data",
+                "valueType": "bh",
+                "value": "result",
+                "mapVarName": "data",
+                "localVar": "bh.result"
+            }
+        ],
+        "serviceImportPath": "app/sd-services/Common",
+        "startName": "setVariable",
+        "inputParams": [
+            "this.page.verificationForm.value"
+        ],
+        "accept_bh": false,
+        "accept_csd": true,
+        "functionName": "sd_tPLrFETA2cPx8zn3",
+        "category": "General",
+        "x": 780,
+        "y": 360,
+        "wires": [
+            [
+                "sd_yqhzAgbHDcrTlgDE",
+                "sd_Zj9irMRjFofwgYJ3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_yqhzAgbHDcrTlgDE",
+        "type": "Log",
         "z": "sd_77k2dJPQTXfSLBMc",
         "viewType": "client-pages",
         "nodeType": "flow",
         "name": "",
-        "operationType": "setItem",
-        "storageType": "sessionStorage",
-        "outputs": 1,
-        "key": {
-            "type": "str",
-            "value": "User"
+        "outputs": 0,
+        "logObject": "bh.result",
+        "functionName": "sd_yqhzAgbHDcrTlgDE",
+        "category": "General",
+        "x": 900,
+        "y": 280,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh",
+                "value": "result",
+                "constant": false
+            }
         },
-        "value": {
-            "type": "this.page",
-            "value": "verificationForm.value"
-        },
-        "resultMapping": {},
-        "functionName": "sd_XlEqKw1G5Nm5LWTd",
-        "category": "Storage",
-        "x": 805,
-        "y": 340,
-        "wires": [
-            [
-                "sd_Zj9irMRjFofwgYJ3"
-            ]
-        ],
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "verificationComponent",
