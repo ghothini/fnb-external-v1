@@ -166,7 +166,8 @@
         "y": 380,
         "wires": [
             [
-                "sd_D1onDjTy0vXPQwqZ"
+                "sd_D1onDjTy0vXPQwqZ",
+                "sd_mTBBNASY8Q00GXW3"
             ]
         ],
         "__n_excludedFromValidation__": {},
@@ -182,6 +183,7 @@
         "nodeType": "flow",
         "name": "verify",
         "method": "post",
+        "methodMapping": "",
         "methodMappingObj": {},
         "urlMapping": "bh.url",
         "urlMappingObj": {
@@ -189,8 +191,10 @@
             "mapVarValue": "url"
         },
         "ret": "json",
+        "retMapping": "",
         "retMappingObj": {},
         "observe": "",
+        "observeMapping": "",
         "observeMappingObj": {},
         "reportProgress": false,
         "withCreds": false,
@@ -206,9 +210,11 @@
         },
         "headers": {},
         "headersObj": [],
+        "headerMapping": "",
         "headerMappingObj": {},
         "params": {},
         "paramsObj": [],
+        "paramMapping": "",
         "paramMappingObj": {},
         "functionName": "verify",
         "category": "HTTP",
@@ -849,6 +855,32 @@
                 "sd_Zj9irMRjFofwgYJ3"
             ]
         ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "verificationComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_mTBBNASY8Q00GXW3",
+        "type": "Log",
+        "z": "sd_77k2dJPQTXfSLBMc",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "bh.url",
+        "functionName": "sd_mTBBNASY8Q00GXW3",
+        "category": "General",
+        "x": 560,
+        "y": 460,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "bh",
+                "value": "url",
+                "constant": false
+            }
+        },
         "__n_excludedFromValidation__": {},
         "generateNext": false,
         "serviceName": "verificationComponent",

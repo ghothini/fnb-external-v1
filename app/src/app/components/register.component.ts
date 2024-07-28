@@ -428,6 +428,7 @@ export class registerComponent {
         title: new FormControl('', Validators.required),
         name: new FormControl('', Validators.required),
         surname: new FormControl('', Validators.required),
+        username: new FormControl('Unknown', Validators.required),
         race: new FormControl('', Validators.required),
         email: new FormControl(page.results.email, [
           Validators.required,

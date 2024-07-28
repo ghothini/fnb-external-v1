@@ -219,6 +219,7 @@ export class verificationComponent {
       bh.url = bh.ssdUrl + 'verification';
       page.showSpinner = true;
       bh = this.verify(bh);
+      this.sd_mTBBNASY8Q00GXW3(bh);
       //appendnew_next_sd_4BPBswPMMDEJOWBi
       return bh;
     } catch (e) {
@@ -327,6 +328,16 @@ export class verificationComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_tbYpneKzV7YDbt5E');
+    }
+  }
+
+  sd_mTBBNASY8Q00GXW3(bh) {
+    try {
+      console.log(new Date().toLocaleTimeString(), bh.url);
+      //appendnew_next_sd_mTBBNASY8Q00GXW3
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_mTBBNASY8Q00GXW3');
     }
   }
 
