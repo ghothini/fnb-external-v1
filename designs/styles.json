@@ -2,6 +2,8 @@
     "classes": [
         "orange",
         "green",
+        "black",
+        "green-bg",
         "grey-bg",
         "full-width",
         "half-width",
@@ -18,6 +20,7 @@
         "margin-1",
         "margin-bottom",
         "margin-bottom-7",
+        "margin-bottom-1em",
         "relative-p",
         "absolute-p",
         "padding-1",
@@ -37,6 +40,7 @@
         "text-center",
         "font",
         "orange-btn",
+        "grey-btn",
         "card-container",
         "black-card",
         "card",
@@ -81,6 +85,10 @@
         "border-white",
         "signature-btn",
         "white",
+        "mat-slide-toggle",
+        "mat-checked",
+        "mat-slide-toggle-thumb",
+        "mat-slide-toggle-bar",
         "bg-black",
         "loader",
         "loading",
@@ -90,6 +98,9 @@
         "mat-raised-button",
         "custom-file-upload",
         "color-orange",
-        "margin-top-0"
+        "margin-top-0",
+        "mat-checkbox-checked",
+        "mat-checkbox-background",
+        "mat-checkbox-indeterminate"
     ]
 }

@@ -1313,6 +1313,7 @@
                 {
                     "_key": "class",
                     "_value": [
+                        "margin-bottom-1em",
                         "contant-contanier",
                         "full-width"
                     ],
@@ -2622,7 +2623,8 @@
                         "6015721d-c8c4-0bb7-de3f-112f536c441f": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "e2cea3ed-b685-4129-147d-a2695a9b2b92",
-                            "commentid": null,
+                            "isCommented": "true",
+                            "commentid": "1721674043822",
                             "designerReference": [
                                 {
                                     "_key": "style",
@@ -3517,7 +3519,7 @@
                                 ]
                             }
                         },
-                        "85013ee3-ee6b-cdd8-6f66-8f831777512e": {
+                        "04244989-e52e-4337-1016-449934770d9c": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "7745d145-a086-aa4a-23aa-ac64ea80ed5e",
                             "commentid": null,
@@ -3531,8 +3533,7 @@
                                 {
                                     "_key": "class",
                                     "_value": [
-                                        "grey-bg",
-                                        "orange-btn"
+                                        "grey-btn"
                                     ],
                                     "_type": "dav",
                                     "_attrDef": "p"
@@ -3576,20 +3577,21 @@
                                 },
                                 {
                                     "_key": "routerLink",
-                                    "_value": "/backpage",
+                                    "_value": "/verification",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 }
                             ]
                         },
-                        "cc772e71-485d-316b-f924-f0e5933f38e8": {
+                        "945183ef-4d4e-97c4-df88-984be2e12072": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "7745d145-a086-aa4a-23aa-ac64ea80ed5e",
-                            "commentid": null,
+                            "isCommented": "true",
+                            "commentid": "1721674040542",
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "color:grey !important;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -3622,7 +3624,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "false",
+                                    "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4496,8 +4498,7 @@
                                 {
                                     "_key": "class",
                                     "_value": [
-                                        "orange-btn",
-                                        "grey-bg"
+                                        "grey-btn"
                                     ],
                                     "_type": "dav",
                                     "_attrDef": "p"
@@ -4550,11 +4551,12 @@
                         "a5889dad-bdca-801c-da0e-c5c5c5c771ff": {
                             "paletteKey": "NG-button",
                             "parentEditorKey": "b413ebd9-c8fc-c903-b346-c340626268f9",
-                            "commentid": null,
+                            "isCommented": "true",
+                            "commentid": "1721674037608",
                             "designerReference": [
                                 {
                                     "_key": "style",
-                                    "_value": "color:grey !important;",
+                                    "_value": "",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },
@@ -4587,7 +4589,7 @@
                                 },
                                 {
                                     "_key": "[disabled]",
-                                    "_value": "false",
+                                    "_value": "true",
                                     "_type": "kv",
                                     "_attrDef": "p"
                                 },

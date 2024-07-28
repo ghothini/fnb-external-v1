@@ -124,15 +124,60 @@ export class registerComponent {
       return this.errorHandler(bh, e, 'sd_NF8r9zaxt8DfR1e6');
     }
   }
+
+  allowNumbers(event: any = undefined, ...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = { event };
+      bh.local = {};
+      bh = this.sd_rBHsHlT8DPkeqsDG(bh);
+      //appendnew_next_allowNumbers
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_tegRQ212ZNRlOle7');
+    }
+  }
+
+  submitt(...others) {
+    let bh: any = {};
+    try {
+      bh = this.__page_injector__
+        .get(SDPageCommonService)
+        .constructFlowObject(this);
+      bh.input = {};
+      bh.local = {};
+      bh = this.sd_Cjq3ODHJmitcncT7(bh);
+      //appendnew_next_submitt
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iV6Rs5IXlikxJnaW');
+    }
+  }
   //appendnew_flow_registerComponent_start
 
   sd_CrCcre20qRV4tpPJ(bh) {
     try {
-      bh = this.sd_ZzOvZ6UEt9Cuxr6f(bh);
+      bh = this.sd_yHRyLOrjvHvKSU4g(bh);
       //appendnew_next_sd_CrCcre20qRV4tpPJ
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_CrCcre20qRV4tpPJ');
+    }
+  }
+
+  async sd_yHRyLOrjvHvKSU4g(bh) {
+    try {
+      const CommonInstance: Common = this.__page_injector__.get(Common);
+
+      let outputVariables = await CommonInstance.getVariable();
+      bh.result = outputVariables.local.data;
+
+      bh = this.sd_ZzOvZ6UEt9Cuxr6f(bh);
+      //appendnew_next_sd_yHRyLOrjvHvKSU4g
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_yHRyLOrjvHvKSU4g');
     }
   }
 
@@ -148,7 +193,8 @@ export class registerComponent {
       this.page.idUploadResult = undefined;
       this.page.isValidatedUpload = false;
       this.page.showSpinner = false;
-      bh = this.sd_vORJrk0WeWisxEdm(bh);
+      this.page.email = bh.result.email;
+      bh = this.sd_Iu8ygKxUV790J4YD(bh);
       //appendnew_next_sd_ZzOvZ6UEt9Cuxr6f
       return bh;
     } catch (e) {
@@ -156,271 +202,34 @@ export class registerComponent {
     }
   }
 
-  sd_vORJrk0WeWisxEdm(bh) {
-    try {
-      this.page.results = JSON.parse(sessionStorage.getItem('User'));
-      bh = this.sd_Iu8ygKxUV790J4YD(bh);
-      //appendnew_next_sd_vORJrk0WeWisxEdm
-      return bh;
-    } catch (e) {
-      return this.errorHandler(bh, e, 'sd_vORJrk0WeWisxEdm');
-    }
-  }
-
   sd_Iu8ygKxUV790J4YD(bh) {
     try {
-      const page = this.page;
-      page.stateGroups = [
-        {
-          letter: 'A',
-          names: [
-            'Afghanistan',
-            'Albania',
-            'Algeria',
-            'Andorra',
-            'Angola',
-            'Antigua and Barbuda',
-            'Argentina',
-            'Armenia',
-            'Australia',
-            'Austria',
-            'Azerbaijan',
-          ],
-        },
-        {
-          letter: 'B',
-          names: [
-            'Bahamas',
-            'Bahrain',
-            'Bangladesh',
-            'Barbados',
-            'Belarus',
-            'Belgium',
-            'Belize',
-            'Benin',
-            'Bhutan',
-            'Bolivia',
-            'Bosnia and Herzegovina',
-            'Botswana',
-            'Brazil',
-            'Brunei',
-            'Bulgaria',
-            'Burkina Faso',
-            'Burundi',
-          ],
-        },
-        {
-          letter: 'C',
-          names: [
-            'Cabo Verde',
-            'Cambodia',
-            'Cameroon',
-            'Canada',
-            'Central African Republic',
-            'Chad',
-            'Chile',
-            'China',
-            'Colombia',
-            'Comoros',
-            'Congo',
-            'Costa Rica',
-            'Croatia',
-            'Cuba',
-            'Cyprus',
-            'Czech Republic',
-          ],
-        },
-        {
-          letter: 'D',
-          names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'],
-        },
-        {
-          letter: 'E',
-          names: [
-            'Ecuador',
-            'Egypt',
-            'El Salvador',
-            'Equatorial Guinea',
-            'Eritrea',
-            'Estonia',
-            'Eswatini',
-            'Ethiopia',
-          ],
-        },
-        { letter: 'F', names: ['Fiji', 'Finland', 'France'] },
-        {
-          letter: 'G',
-          names: [
-            'Gabon',
-            'Gambia',
-            'Georgia',
-            'Germany',
-            'Ghana',
-            'Greece',
-            'Grenada',
-            'Guatemala',
-            'Guinea',
-            'Guinea-Bissau',
-            'Guyana',
-          ],
-        },
-        { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },
-        {
-          letter: 'I',
-          names: [
-            'Iceland',
-            'India',
-            'Indonesia',
-            'Iran',
-            'Iraq',
-            'Ireland',
-            'Israel',
-            'Italy',
-            'Ivory Coast',
-          ],
-        },
-        { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },
-        {
-          letter: 'K',
-          names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'],
-        },
-        {
-          letter: 'L',
-          names: [
-            'Laos',
-            'Latvia',
-            'Lebanon',
-            'Lesotho',
-            'Liberia',
-            'Libya',
-            'Liechtenstein',
-            'Lithuania',
-            'Luxembourg',
-          ],
-        },
-        {
-          letter: 'M',
-          names: [
-            'Madagascar',
-            'Malawi',
-            'Malaysia',
-            'Maldives',
-            'Mali',
-            'Malta',
-            'Marshall Islands',
-            'Mauritania',
-            'Mauritius',
-            'Mexico',
-            'Micronesia',
-            'Moldova',
-            'Monaco',
-            'Mongolia',
-            'Montenegro',
-            'Morocco',
-            'Mozambique',
-            'Myanmar',
-          ],
-        },
-        {
-          letter: 'N',
-          names: [
-            'Namibia',
-            'Nauru',
-            'Nepal',
-            'Netherlands',
-            'New Zealand',
-            'Nicaragua',
-            'Niger',
-            'Nigeria',
-            'North Korea',
-            'North Macedonia',
-            'Norway',
-          ],
-        },
-        { letter: 'O', names: ['Oman'] },
-        {
-          letter: 'P',
-          names: [
-            'Pakistan',
-            'Palau',
-            'Panama',
-            'Papua New Guinea',
-            'Paraguay',
-            'Peru',
-            'Philippines',
-            'Poland',
-            'Portugal',
-          ],
-        },
-        { letter: 'Q', names: ['Qatar'] },
-        { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },
-        {
-          letter: 'S',
-          names: [
-            'Saint Kitts and Nevis',
-            'Saint Lucia',
-            'Saint Vincent and the Grenadines',
-            'Samoa',
-            'San Marino',
-            'Sao Tome and Principe',
-            'Saudi Arabia',
-            'Senegal',
-            'Serbia',
-            'Seychelles',
-            'Sierra Leone',
-            'Singapore',
-            'Slovakia',
-            'Slovenia',
-            'Solomon Islands',
-            'Somalia',
-            'South Africa',
-            'South Korea',
-            'South Sudan',
-            'Spain',
-            'Sri Lanka',
-            'Sudan',
-            'Suriname',
-            'Sweden',
-            'Switzerland',
-            'Syria',
-          ],
-        },
-        {
-          letter: 'T',
-          names: [
-            'Taiwan',
-            'Tajikistan',
-            'Tanzania',
-            'Thailand',
-            'Timor-Leste',
-            'Togo',
-            'Tonga',
-            'Trinidad and Tobago',
-            'Tunisia',
-            'Turkey',
-            'Turkmenistan',
-            'Tuvalu',
-          ],
-        },
-        {
-          letter: 'U',
-          names: [
-            'Uganda',
-            'Ukraine',
-            'United Arab Emirates',
-            'United Kingdom',
-            'United States',
-            'Uruguay',
-            'Uzbekistan',
-          ],
-        },
-        {
-          letter: 'V',
-          names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'],
-        },
-        { letter: 'Y', names: ['Yemen'] },
-        { letter: 'Z', names: ['Zambia', 'Zimbabwe'] },
-      ];
+      const page = this.page; // page.stateGroups = [
+      //   { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },
+      //   { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },
+      //   { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },
+      //   { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },
+      //   { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },
+      //   { letter: 'F', names: ['Fiji', 'Finland', 'France'] },
+      //   { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },
+      //   { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },
+      //   { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },
+      //   { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },
+      //   { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },
+      //   { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },
+      //   { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },
+      //   { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },
+      //   { letter: 'O', names: ['Oman'] },
+      //   { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },
+      //   { letter: 'Q', names: ['Qatar'] },
+      //   { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },
+      //   { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },
+      //   { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },
+      //   { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },
+      //   { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },
+      //   { letter: 'Y', names: ['Yemen'] },
+      //   { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }
+      // ]
 
       page.registerForm = new FormGroup({
         _id: new FormControl(new Date().getTime()),
@@ -430,7 +239,7 @@ export class registerComponent {
         surname: new FormControl('', Validators.required),
         username: new FormControl('Unknown', Validators.required),
         race: new FormControl('', Validators.required),
-        email: new FormControl(page.results.email, [
+        email: new FormControl(bh.result.email, [
           Validators.required,
           Validators.pattern(/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/),
         ]),
@@ -448,6 +257,8 @@ export class registerComponent {
         paySlipDocument: new FormControl(''),
         paySlipFileName: new FormControl(''),
       });
+
+      console.log('this is from the get service ==>', bh.result);
 
       //appendnew_next_sd_Iu8ygKxUV790J4YD
       return bh;
@@ -693,16 +504,32 @@ export class registerComponent {
   async sd_b0wDVtLpQBWtosez(bh) {
     try {
       const { paramObj: qprm, path: path } =
-        this.sdService.getPathAndQParamsObj('/regulations');
+        this.sdService.getPathAndQParamsObj('/home/landing');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
-          queryParams: Object.assign(qprm, ''),
-        });
+        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+      bh = this.sd_GxLXK1FyBtZ8i93O(bh);
       //appendnew_next_sd_b0wDVtLpQBWtosez
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_b0wDVtLpQBWtosez');
+    }
+  }
+
+  sd_GxLXK1FyBtZ8i93O(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Registration successful', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_GxLXK1FyBtZ8i93O
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_GxLXK1FyBtZ8i93O');
     }
   }
 
@@ -774,7 +601,6 @@ export class registerComponent {
     try {
       const page = this.page;
       const file: File | null = bh.input.event.target.files?.[0] || null;
-      // const fileElement = document.getElementById('uploadedFile1') as HTMLInputElement;
       const filesTypeArr = ['pdf', 'docx', 'jpeg', 'jpg', 'webp', 'png'];
       //CURRENT
 
@@ -792,10 +618,6 @@ export class registerComponent {
             }
           });
 
-          //  page.result = {
-          //    file: page.uploadedFile1,
-          //    email: page.email
-          //  }
           console.log('results', page.idUploadResult);
         }
         if (bh.input.docType === 'POP') {
@@ -877,6 +699,335 @@ export class registerComponent {
       return bh;
     } catch (e) {
       return this.errorHandler(bh, e, 'sd_8aHAOofNWCzh1etZ');
+    }
+  }
+
+  sd_rBHsHlT8DPkeqsDG(bh) {
+    try {
+      const page = this.page;
+      bh.allowedKeys = [
+        'Backspace',
+        'ArrowLeft',
+        'ArrowRight',
+        'Delete',
+        'Control',
+      ]; // Add any other allowed keys here
+      if (
+        bh.allowedKeys.includes(bh.input.event.key) ||
+        (bh.input.event.ctrlKey &&
+          (bh.input.event.key === 'v' || bh.input.event.key === 'c'))
+      ) {
+        return; // Allow these keys
+      }
+
+      if (!/^\d$/.test(bh.input.event.key)) {
+        bh.input.event.preventDefault(); // Prevent non-numeric keys
+      }
+      //appendnew_next_sd_rBHsHlT8DPkeqsDG
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_rBHsHlT8DPkeqsDG');
+    }
+  }
+
+  async sd_Cjq3ODHJmitcncT7(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          this.page.registerForm.invalid,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_3dOXvh5qhRftl143(bh);
+      } else {
+        bh = await this.fileUploadSwitch1(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Cjq3ODHJmitcncT7');
+    }
+  }
+
+  async fileUploadSwitch1(bh) {
+    try {
+      let unsatisfied = true;
+      if (
+        this.sdService.operators['true'](
+          this.page.filesUploadResult,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_iXeJm2qvF0nsYQNs(bh);
+        unsatisfied = false;
+      }
+      if (unsatisfied) {
+        bh = await this.sd_3p0IWT4kqgyllO5j(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nXKDYHXMXlo6RZUq');
+    }
+  }
+
+  sd_iXeJm2qvF0nsYQNs(bh) {
+    try {
+      const page = this.page;
+      page.showSpinner = true;
+      bh = this.sd_EVo0ftoTQPK5tg63(bh);
+      //appendnew_next_sd_iXeJm2qvF0nsYQNs
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_iXeJm2qvF0nsYQNs');
+    }
+  }
+
+  sd_EVo0ftoTQPK5tg63(bh) {
+    try {
+      bh.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_zZgpF53rVBthEoVL(bh);
+      //appendnew_next_sd_EVo0ftoTQPK5tg63
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EVo0ftoTQPK5tg63');
+    }
+  }
+
+  sd_zZgpF53rVBthEoVL(bh) {
+    try {
+      const page = this.page;
+      bh.url = bh.ssdUrl + 'upload-file';
+      // page.loader = true;
+
+      bh = this.uploadId1(bh);
+      //appendnew_next_sd_zZgpF53rVBthEoVL
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_zZgpF53rVBthEoVL');
+    }
+  }
+
+  async uploadId1(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile1,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_pWt9Xg6SEhgM8yad(bh);
+      //appendnew_next_uploadId1
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_nH6GFVU06WYEh2Vp');
+    }
+  }
+
+  sd_pWt9Xg6SEhgM8yad(bh) {
+    try {
+      const page = this.page;
+      page.registerForm.get('idDocument').setValue(page.result.filename);
+      bh = this.sd_liLNNISAMqEKNmSF(bh);
+      //appendnew_next_sd_pWt9Xg6SEhgM8yad
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_pWt9Xg6SEhgM8yad');
+    }
+  }
+
+  async sd_liLNNISAMqEKNmSF(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.uploadedFile2,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_hVK942Kbq0bNivBW(bh);
+      //appendnew_next_sd_liLNNISAMqEKNmSF
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_liLNNISAMqEKNmSF');
+    }
+  }
+
+  sd_hVK942Kbq0bNivBW(bh) {
+    try {
+      const page = this.page;
+      page.registerForm.get('paySlipDocument').setValue(page.result.filename);
+      bh = this.sd_VSAavyFmoDI0YPMI(bh);
+      //appendnew_next_sd_hVK942Kbq0bNivBW
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_hVK942Kbq0bNivBW');
+    }
+  }
+
+  sd_VSAavyFmoDI0YPMI(bh) {
+    try {
+      bh.ssdUrl = bh.system.environment.properties.ssdURL;
+      bh = this.sd_81Cz54GCRnrpnzoV(bh);
+      //appendnew_next_sd_VSAavyFmoDI0YPMI
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_VSAavyFmoDI0YPMI');
+    }
+  }
+
+  sd_81Cz54GCRnrpnzoV(bh) {
+    try {
+      const page = this.page;
+      bh.url = bh.ssdUrl + 'register';
+      page.loader = true;
+
+      bh = this.sd_sr1xLF1KddmdIbco(bh);
+      //appendnew_next_sd_81Cz54GCRnrpnzoV
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_81Cz54GCRnrpnzoV');
+    }
+  }
+
+  async sd_sr1xLF1KddmdIbco(bh) {
+    try {
+      let requestOptions = {
+        url: bh.url,
+        method: 'post',
+        responseType: 'json',
+        headers: {},
+        params: {},
+        body: this.page.registerForm.value,
+      };
+      this.page.result = await this.sdService.nHttpRequest(requestOptions);
+      bh = this.sd_EBLlWBKY7EN3bdVC(bh);
+      //appendnew_next_sd_sr1xLF1KddmdIbco
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_sr1xLF1KddmdIbco');
+    }
+  }
+
+  sd_EBLlWBKY7EN3bdVC(bh) {
+    try {
+      const page = this.page;
+      page.registerForm.reset();
+      page.showSpinner = false;
+      if (page.result.message) {
+        bh.isApprovingApplication = false;
+      } else {
+        bh.isApprovingApplication = true;
+      }
+      bh = this.sd_eSlhi8KiCRVnyaJ1(bh);
+      //appendnew_next_sd_EBLlWBKY7EN3bdVC
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_EBLlWBKY7EN3bdVC');
+    }
+  }
+
+  sd_eSlhi8KiCRVnyaJ1(bh) {
+    try {
+      if (
+        this.sdService.operators['true'](
+          bh.isApprovingApplication,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_5hCoDPVoeiZ7rKz7(bh);
+      } else if (
+        this.sdService.operators['false'](
+          bh.isApprovingApplication,
+          undefined,
+          undefined,
+          undefined
+        )
+      ) {
+        bh = this.sd_Isl40qS3R6uUAwpy(bh);
+      }
+
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_eSlhi8KiCRVnyaJ1');
+    }
+  }
+
+  async sd_5hCoDPVoeiZ7rKz7(bh) {
+    try {
+      const { paramObj: qprm, path: path } =
+        this.sdService.getPathAndQParamsObj('/regulations');
+      await this.__page_injector__
+        .get(Router)
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
+      //appendnew_next_sd_5hCoDPVoeiZ7rKz7
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_5hCoDPVoeiZ7rKz7');
+    }
+  }
+
+  sd_Isl40qS3R6uUAwpy(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('User account application already exists!', 'Ok', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_Isl40qS3R6uUAwpy
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_Isl40qS3R6uUAwpy');
+    }
+  }
+
+  sd_3p0IWT4kqgyllO5j(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Please upload ID and Payslip', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_3p0IWT4kqgyllO5j
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3p0IWT4kqgyllO5j');
+    }
+  }
+
+  sd_3dOXvh5qhRftl143(bh) {
+    try {
+      this.__page_injector__
+        .get(MatSnackBar)
+        .open('Please fill all the fields', 'OK', {
+          duration: 3000,
+          direction: 'ltr',
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
+      //appendnew_next_sd_3dOXvh5qhRftl143
+      return bh;
+    } catch (e) {
+      return this.errorHandler(bh, e, 'sd_3dOXvh5qhRftl143');
     }
   }
 

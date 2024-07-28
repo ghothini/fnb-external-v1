@@ -29,11 +29,12 @@
       <div style="font-weight: 350" class="no-margin">
         <button class="fra-btn"><a href="https://drive.google.com/file/d/1Jl9wIaNYoNd98HZzy5aWCSxkNOm08bdD/view?usp=sharing">View Full FRA</a></button>
       </div>
-      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true"><mat-checkbox [required]="false"></mat-checkbox>
+      <div fxLayout="row wrap" fxLayoutGap="1em" fxLayoutAlign="start center" [fxShow]="true">
+        <form #checkBox="ngForm"><mat-checkbox [(ngModel)]="page.checkForm.checkBox" name="checkBox" [required]="true"></mat-checkbox></form>
         <div style="font-weight: 300;" class="no-margin">
           I have read and understoond the FRA</div>
       </div>
     </div>
   </div>
-  <div fxLayout="row wrap" style="flex:1; padding-right:10px;" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="disagree back-btn" routerLink="/home">Disagree</button><button mat-button class="agree continue-btn" (click)="submit()">Agree</button></div>
+  <div fxLayout="row wrap" style="flex:1; padding-right:10px;" class="footer-box" fxLayoutGap=".5em" fxLayoutAlign="end center" [fxShow]="true"><button mat-button class="disagree back-btn" (click)="disagree()" routerLink="/home">Disagree</button><button mat-button class="agree continue-btn" (click)="submit(checkBox)">Agree</button></div>
 </div>
