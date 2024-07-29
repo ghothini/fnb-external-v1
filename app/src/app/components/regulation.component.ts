@@ -184,7 +184,9 @@ export class regulationComponent {
         this.sdService.getPathAndQParamsObj('/register');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       //appendnew_next_sd_RRaQEP3tCMNSlNQZ
       return bh;
     } catch (e) {
@@ -196,7 +198,7 @@ export class regulationComponent {
     try {
       this.__page_injector__
         .get(MatSnackBar)
-        .open('Checkbox is not checked', 'OK', {
+        .open('You need to agree to the terms and conditions', 'OK', {
           duration: 3000,
           direction: 'ltr',
           horizontalPosition: 'center',
@@ -266,7 +268,9 @@ export class regulationComponent {
         this.sdService.getPathAndQParamsObj('/home/landing');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_aTiBR7WSVw0JfRD9(bh);
       bh = this.sd_d29JjT3BHsdxwFSx(bh);
       //appendnew_next_sd_ULtCQj0a7XSiLrUU

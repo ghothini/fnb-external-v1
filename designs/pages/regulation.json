@@ -143,6 +143,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/register",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_RRaQEP3tCMNSlNQZ",
         "category": "Navigation",
         "x": 405,
@@ -297,6 +304,13 @@
         "nodeType": "flow",
         "name": "",
         "path": "/home/landing",
+        "pathMap": "",
+        "pathparams": "",
+        "pathparamsMap": "",
+        "qparams": "",
+        "qparamsMap": "",
+        "qparamsArray": "",
+        "resultMapping": "",
         "functionName": "sd_ULtCQj0a7XSiLrUU",
         "category": "Navigation",
         "x": 485,
@@ -332,7 +346,9 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
+        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
+        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
@@ -444,7 +460,7 @@
         "name": "",
         "message": {
             "type": "str",
-            "value": "Checkbox is not checked"
+            "value": "You need to agree to the terms and conditions"
         },
         "action": {
             "type": "str",
@@ -455,9 +471,7 @@
             "value": "3000"
         },
         "horizontalPosition": "center",
-        "horizontalPositionMap": "",
         "verticalPosition": "bottom",
-        "verticalPositionMap": "",
         "panelClass": {
             "type": "str",
             "value": ""
