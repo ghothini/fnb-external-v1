@@ -204,45 +204,19 @@ export class registerComponent {
 
   sd_Iu8ygKxUV790J4YD(bh) {
     try {
-      const page = this.page; // page.stateGroups = [
-      //   { letter: 'A', names: ['Afghanistan', 'Albania', 'Algeria', 'Andorra', 'Angola', 'Antigua and Barbuda', 'Argentina', 'Armenia', 'Australia', 'Austria', 'Azerbaijan'] },
-      //   { letter: 'B', names: ['Bahamas', 'Bahrain', 'Bangladesh', 'Barbados', 'Belarus', 'Belgium', 'Belize', 'Benin', 'Bhutan', 'Bolivia', 'Bosnia and Herzegovina', 'Botswana', 'Brazil', 'Brunei', 'Bulgaria', 'Burkina Faso', 'Burundi'] },
-      //   { letter: 'C', names: ['Cabo Verde', 'Cambodia', 'Cameroon', 'Canada', 'Central African Republic', 'Chad', 'Chile', 'China', 'Colombia', 'Comoros', 'Congo', 'Costa Rica', 'Croatia', 'Cuba', 'Cyprus', 'Czech Republic'] },
-      //   { letter: 'D', names: ['Denmark', 'Djibouti', 'Dominica', 'Dominican Republic'] },
-      //   { letter: 'E', names: ['Ecuador', 'Egypt', 'El Salvador', 'Equatorial Guinea', 'Eritrea', 'Estonia', 'Eswatini', 'Ethiopia'] },
-      //   { letter: 'F', names: ['Fiji', 'Finland', 'France'] },
-      //   { letter: 'G', names: ['Gabon', 'Gambia', 'Georgia', 'Germany', 'Ghana', 'Greece', 'Grenada', 'Guatemala', 'Guinea', 'Guinea-Bissau', 'Guyana'] },
-      //   { letter: 'H', names: ['Haiti', 'Honduras', 'Hungary'] },
-      //   { letter: 'I', names: ['Iceland', 'India', 'Indonesia', 'Iran', 'Iraq', 'Ireland', 'Israel', 'Italy', 'Ivory Coast'] },
-      //   { letter: 'J', names: ['Jamaica', 'Japan', 'Jordan'] },
-      //   { letter: 'K', names: ['Kazakhstan', 'Kenya', 'Kiribati', 'Kuwait', 'Kyrgyzstan'] },
-      //   { letter: 'L', names: ['Laos', 'Latvia', 'Lebanon', 'Lesotho', 'Liberia', 'Libya', 'Liechtenstein', 'Lithuania', 'Luxembourg'] },
-      //   { letter: 'M', names: ['Madagascar', 'Malawi', 'Malaysia', 'Maldives', 'Mali', 'Malta', 'Marshall Islands', 'Mauritania', 'Mauritius', 'Mexico', 'Micronesia', 'Moldova', 'Monaco', 'Mongolia', 'Montenegro', 'Morocco', 'Mozambique', 'Myanmar'] },
-      //   { letter: 'N', names: ['Namibia', 'Nauru', 'Nepal', 'Netherlands', 'New Zealand', 'Nicaragua', 'Niger', 'Nigeria', 'North Korea', 'North Macedonia', 'Norway'] },
-      //   { letter: 'O', names: ['Oman'] },
-      //   { letter: 'P', names: ['Pakistan', 'Palau', 'Panama', 'Papua New Guinea', 'Paraguay', 'Peru', 'Philippines', 'Poland', 'Portugal'] },
-      //   { letter: 'Q', names: ['Qatar'] },
-      //   { letter: 'R', names: ['Romania', 'Russia', 'Rwanda'] },
-      //   { letter: 'S', names: ['Saint Kitts and Nevis', 'Saint Lucia', 'Saint Vincent and the Grenadines', 'Samoa', 'San Marino', 'Sao Tome and Principe', 'Saudi Arabia', 'Senegal', 'Serbia', 'Seychelles', 'Sierra Leone', 'Singapore', 'Slovakia', 'Slovenia', 'Solomon Islands', 'Somalia', 'South Africa', 'South Korea', 'South Sudan', 'Spain', 'Sri Lanka', 'Sudan', 'Suriname', 'Sweden', 'Switzerland', 'Syria'] },
-      //   { letter: 'T', names: ['Taiwan', 'Tajikistan', 'Tanzania', 'Thailand', 'Timor-Leste', 'Togo', 'Tonga', 'Trinidad and Tobago', 'Tunisia', 'Turkey', 'Turkmenistan', 'Tuvalu'] },
-      //   { letter: 'U', names: ['Uganda', 'Ukraine', 'United Arab Emirates', 'United Kingdom', 'United States', 'Uruguay', 'Uzbekistan'] },
-      //   { letter: 'V', names: ['Vanuatu', 'Vatican City', 'Venezuela', 'Vietnam'] },
-      //   { letter: 'Y', names: ['Yemen'] },
-      //   { letter: 'Z', names: ['Zambia', 'Zimbabwe'] }
-      // ]
-
+      const page = this.page;
       page.registerForm = new FormGroup({
         _id: new FormControl(new Date().getTime()),
         createDate: new FormControl(new Date()),
         title: new FormControl('', Validators.required),
         name: new FormControl('', Validators.required),
         surname: new FormControl('', Validators.required),
-        username: new FormControl('Unknown', Validators.required),
         race: new FormControl('', Validators.required),
         email: new FormControl(bh.result.email, [
           Validators.required,
           Validators.pattern(/^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/),
         ]),
+        cellNumber: new FormControl('', Validators.required),
         income: new FormControl('', Validators.required),
         depedents: new FormControl('', Validators.required),
         marital: new FormControl('', Validators.required),
@@ -507,7 +481,9 @@ export class registerComponent {
         this.sdService.getPathAndQParamsObj('/home/landing');
       await this.__page_injector__
         .get(Router)
-        .navigate([this.sdService.formatPathWithParams(path, undefined)]);
+        .navigate([this.sdService.formatPathWithParams(path, undefined)], {
+          queryParams: Object.assign(qprm, ''),
+        });
       bh = this.sd_GxLXK1FyBtZ8i93O(bh);
       //appendnew_next_sd_b0wDVtLpQBWtosez
       return bh;

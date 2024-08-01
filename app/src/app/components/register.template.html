@@ -18,8 +18,6 @@
         </div><img imgSrc="/Web/Images/profile.png.PNG" style="height:170px" width="200px">
       </div>
       <div fxLayout="row wrap" style="width:63%;padding:10px" fxLayoutAlign="start stretch" [fxShow]="true">
-        <h4>
-          About you</h4>
         <p style="margin-top:0" class="font-w400">
           Your cellphone number will be linked to your account. FNB makes sure your information is kept safe and secure.</p>
         <form [formGroup]="page.registerForm" style="gap:1em">
@@ -64,12 +62,19 @@
               <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
             </mat-form-field>
           </div>
+          <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true"><label>
+              Cell Number</label>
+            <mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;" [hideRequiredMarker]="false">
+              <input matInput [(ngModel)]="page.registerForm.cellNumber" type="number" placeholder="e.g 0796682774" [required]="true" formControlName="cellNumber" (keydown)="allowNumbers($event)" readonly="false" [disabled]="false">
+              <mat-error align="start" *ngIf="page.registerForm.get(&apos;email&apos;)?.hasError(&apos;pattern&apos;)">Enter a valid email address</mat-error>
+            </mat-form-field>
+          </div>
           <div fxLayout="column wrap" fxLayoutGap=".5em" fxLayoutAlign="start stretch" [fxShow]="true">
             <div>
               Marital status</div><mat-form-field [appearance]="&apos;fill&apos;" [floatLabel]="&apos;auto&apos;">
               <mat-label></mat-label>
               <mat-select formControlName="marital" [required]="true">
-                <mat-option [value]="&apos;Divorced&apos;" disabled="false">Divorced</mat-option><mat-option [value]="&apos;Married&apos;" disabled="false">Married</mat-option><mat-option [value]="&apos;Separated&apos;" disabled="false">Separated</mat-option><mat-option [value]="&apos;Unmarried&apos;" disabled="false">Unmarried</mat-option><mat-option [value]="&apos;Widowed&apos;" disabled="false">Widowed</mat-option><mat-option [value]="&apos;Please select&apos;" disabled="false">Please select</mat-option><mat-option [value]="&apos;Please Select&apos;" disabled="false">Please Select</mat-option>
+                <mat-option [value]="&apos;Divorced&apos;" disabled="false">Divorced</mat-option><mat-option [value]="&apos;Married&apos;" disabled="false">Married</mat-option><mat-option [value]="&apos;Separated&apos;" disabled="false">Separated</mat-option><mat-option [value]="&apos;Unmarried&apos;" disabled="false">Unmarried</mat-option><mat-option [value]="&apos;Widowed&apos;" disabled="false">Widowed</mat-option>
               </mat-select>
 
             </mat-form-field>
@@ -152,7 +157,7 @@
       </div>
     </div>
   </div>
-  <div fxLayout="column wrap" style="height:7%" class="footer-box" fxLayoutAlign="center end" [fxShow]="true">
+  <div fxLayout="column wrap" class="height-8 footer-box" fxLayoutAlign="center end" [fxShow]="true">
     <div fxLayout="row wrap" style="margin-right:10px;" fxLayoutGap="5px" fxLayoutAlign="center center" [fxShow]="true"><button mat-button class="back back-btn" (click)="goBack()">Back</button><button mat-button class="continue continue-btn" (click)="submit()">Continue</button></div>
   </div>
 </div>
